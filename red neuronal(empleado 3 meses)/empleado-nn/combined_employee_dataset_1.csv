@@ -1,0 +1,792 @@
+age,years_experience,education_level,department,performance_score,performance_category
+58,23,High School,Finance,10,Excellent
+48,39,Bachelor,HR,6,Good
+34,15,High School,HR,5,Average
+27,29,PhD,HR,4,Average
+40,36,PhD,Finance,2,Poor
+58,13,PhD,Tech,4,Average
+38,32,PhD,Tech,10,Excellent
+42,7,PhD,Finance,10,Excellent
+30,22,Master,HR,3,Poor
+30,28,Master,HR,10,Excellent
+43,2,High School,Tech,1,Poor
+55,6,PhD,HR,8,Very Good
+59,28,High School,Sales,5,Average
+43,28,PhD,Tech,4,Average
+22,20,PhD,HR,8,Very Good
+41,30,Master,Tech,7,Good
+21,11,Master,Sales,2,Poor
+43,28,Bachelor,Tech,1,Poor
+49,25,Master,Tech,4,Average
+57,39,Bachelor,Tech,8,Very Good
+21,33,Bachelor,Tech,2,Poor
+40,1,Bachelor,Sales,3,Poor
+52,27,Bachelor,Finance,1,Poor
+31,13,Bachelor,Tech,1,Poor
+41,3,High School,Tech,3,Poor
+44,39,Master,HR,5,Average
+46,6,Bachelor,Tech,3,Poor
+47,8,PhD,HR,1,Poor
+35,27,Master,Finance,1,Poor
+34,9,Master,Sales,8,Very Good
+22,37,Bachelor,Sales,10,Excellent
+56,33,High School,Finance,2,Poor
+26,24,Bachelor,Sales,3,Poor
+40,15,High School,Finance,2,Poor
+28,32,PhD,Finance,3,Poor
+58,32,Master,Finance,7,Good
+37,24,PhD,Sales,1,Poor
+23,12,High School,HR,10,Excellent
+44,39,High School,Finance,8,Very Good
+33,2,PhD,Tech,10,Excellent
+28,3,High School,Sales,10,Excellent
+45,37,PhD,Finance,10,Excellent
+21,17,Master,Finance,2,Poor
+39,2,PhD,Tech,3,Poor
+47,2,Master,HR,9,Very Good
+26,28,PhD,HR,7,Good
+27,23,High School,HR,4,Average
+54,37,PhD,Finance,10,Excellent
+33,32,High School,Finance,5,Average
+36,33,PhD,Finance,2,Poor
+55,1,PhD,Sales,8,Very Good
+59,19,Bachelor,Tech,4,Average
+23,2,High School,Finance,9,Very Good
+21,26,Bachelor,Tech,5,Average
+25,32,High School,Tech,9,Very Good
+23,6,Bachelor,HR,4,Average
+48,32,Master,Sales,10,Excellent
+37,4,PhD,Finance,5,Average
+45,11,High School,HR,9,Very Good
+53,17,High School,HR,8,Very Good
+29,38,PhD,Finance,3,Poor
+55,24,High School,Tech,1,Poor
+33,5,High School,HR,3,Poor
+50,34,Bachelor,Tech,4,Average
+34,6,High School,Sales,2,Poor
+27,22,Master,Tech,1,Poor
+33,11,Master,Sales,7,Good
+42,16,PhD,Tech,8,Very Good
+59,33,High School,HR,7,Good
+40,9,PhD,HR,5,Average
+35,6,Master,Sales,1,Poor
+37,16,High School,Finance,7,Good
+43,29,High School,Sales,7,Good
+45,3,PhD,Sales,9,Very Good
+44,20,Master,Tech,3,Poor
+48,36,High School,Tech,9,Very Good
+34,19,PhD,Sales,1,Poor
+20,26,Master,HR,1,Poor
+44,3,PhD,Tech,4,Average
+26,19,Bachelor,Finance,9,Very Good
+28,20,High School,Tech,6,Good
+43,32,Bachelor,Tech,3,Poor
+20,7,Master,Finance,1,Poor
+27,33,Bachelor,Sales,4,Average
+43,39,Bachelor,Finance,9,Very Good
+30,18,Master,Sales,3,Poor
+36,1,PhD,Sales,9,Very Good
+27,11,Bachelor,Sales,7,Good
+54,28,PhD,Finance,4,Average
+54,25,Bachelor,Sales,3,Poor
+52,23,PhD,HR,10,Excellent
+24,31,Master,Finance,5,Average
+58,30,Bachelor,HR,5,Average
+47,35,Master,Sales,3,Poor
+26,7,Bachelor,Tech,9,Very Good
+28,16,Master,Sales,4,Average
+27,26,Master,HR,5,Average
+31,2,Bachelor,HR,4,Average
+53,1,Bachelor,Finance,5,Average
+52,12,Bachelor,Tech,7,Good
+42,5,High School,Finance,9,Very Good
+43,37,PhD,HR,7,Good
+56,32,High School,Sales,5,Average
+54,9,High School,Tech,10,Excellent
+59,35,Master,Sales,10,Excellent
+41,19,Bachelor,Sales,7,Good
+46,16,PhD,Tech,10,Excellent
+54,3,Master,Finance,5,Average
+20,20,High School,Sales,3,Poor
+54,24,Bachelor,HR,7,Good
+56,33,Master,Sales,2,Poor
+33,24,Bachelor,Tech,9,Very Good
+22,11,Master,Tech,10,Excellent
+20,8,Bachelor,Tech,10,Excellent
+24,36,High School,Finance,1,Poor
+45,38,PhD,Sales,6,Good
+33,20,High School,Finance,7,Good
+58,35,PhD,Finance,8,Very Good
+46,25,Bachelor,Tech,10,Excellent
+28,35,Master,Tech,9,Very Good
+34,25,High School,Finance,2,Poor
+34,29,PhD,Sales,10,Excellent
+45,18,High School,HR,2,Poor
+32,18,PhD,Finance,5,Average
+51,2,High School,Sales,5,Average
+58,35,PhD,Tech,6,Good
+51,16,PhD,Tech,3,Poor
+23,36,Bachelor,Sales,8,Very Good
+49,33,PhD,HR,1,Poor
+56,4,Bachelor,Tech,6,Good
+58,19,Bachelor,Tech,7,Good
+48,26,PhD,HR,5,Average
+34,3,High School,HR,5,Average
+27,19,PhD,Tech,2,Poor
+40,20,High School,HR,3,Poor
+58,32,High School,Sales,7,Good
+38,7,PhD,Sales,6,Good
+42,33,PhD,Tech,2,Poor
+30,39,PhD,Finance,6,Good
+30,18,PhD,Tech,2,Poor
+43,1,Master,Tech,2,Poor
+55,11,Bachelor,Finance,2,Poor
+59,28,High School,Finance,3,Poor
+43,25,PhD,Finance,2,Poor
+22,23,PhD,Sales,4,Average
+41,31,PhD,HR,9,Very Good
+21,30,Master,Sales,6,Good
+43,35,PhD,HR,1,Poor
+49,7,PhD,Sales,8,Very Good
+57,16,PhD,HR,7,Good
+21,26,Bachelor,Sales,10,Excellent
+40,2,Master,Finance,3,Poor
+52,1,PhD,Tech,1,Poor
+31,12,High School,Sales,5,Average
+41,5,High School,HR,4,Average
+44,37,High School,Finance,10,Excellent
+46,32,Master,Sales,8,Very Good
+47,9,Master,Sales,1,Poor
+35,35,High School,Finance,10,Excellent
+34,19,PhD,Sales,1,Poor
+22,16,Master,Tech,4,Average
+56,3,High School,Sales,8,Very Good
+26,20,High School,Tech,5,Average
+40,24,PhD,Tech,2,Poor
+28,33,Bachelor,Finance,6,Good
+58,24,Master,Sales,5,Average
+37,11,PhD,Finance,2,Poor
+23,8,High School,Sales,3,Poor
+44,36,High School,Sales,9,Very Good
+33,38,PhD,HR,7,Good
+28,20,Master,Sales,7,Good
+45,35,Bachelor,Finance,6,Good
+21,25,Bachelor,Tech,8,Very Good
+39,35,High School,Sales,4,Average
+47,25,Master,HR,8,Very Good
+26,29,Bachelor,Finance,4,Average
+27,18,Master,Sales,8,Very Good
+54,18,Master,Finance,9,Very Good
+33,2,High School,HR,3,Poor
+36,35,Bachelor,HR,3,Poor
+55,16,PhD,Finance,2,Poor
+59,36,High School,Sales,10,Excellent
+23,33,Bachelor,Tech,3,Poor
+21,4,Bachelor,HR,3,Poor
+25,33,Bachelor,Sales,5,Average
+23,14,Bachelor,Sales,5,Average
+48,21,Bachelor,Tech,2,Poor
+37,20,Master,HR,10,Excellent
+45,8,High School,HR,6,Good
+53,7,Master,Sales,5,Average
+29,3,PhD,Sales,6,Good
+55,17,Bachelor,Tech,1,Poor
+33,33,High School,Tech,5,Average
+50,12,Bachelor,HR,9,Very Good
+34,22,High School,Finance,10,Excellent
+27,22,Master,HR,2,Poor
+33,30,High School,Sales,1,Poor
+42,38,PhD,HR,10,Excellent
+59,38,PhD,Finance,9,Very Good
+40,8,High School,Tech,10,Excellent
+35,27,High School,Finance,9,Very Good
+37,27,High School,Finance,9,Very Good
+43,34,High School,Finance,6,Good
+45,21,PhD,Tech,8,Very Good
+44,30,Bachelor,Finance,1,Poor
+48,33,High School,Finance,10,Excellent
+34,28,High School,Finance,4,Average
+20,33,PhD,Sales,1,Poor
+44,5,PhD,Finance,8,Very Good
+26,19,Master,Tech,1,Poor
+28,4,High School,Finance,3,Poor
+43,35,Master,Finance,4,Average
+20,17,PhD,Tech,8,Very Good
+27,28,PhD,Finance,6,Good
+43,30,Bachelor,Tech,10,Excellent
+30,29,High School,Finance,7,Good
+36,6,Master,Tech,8,Very Good
+27,35,PhD,Finance,2,Poor
+54,37,PhD,Finance,10,Excellent
+54,24,Master,Sales,8,Very Good
+52,29,Bachelor,Sales,3,Poor
+24,31,PhD,Finance,7,Good
+58,35,High School,Finance,3,Poor
+47,33,PhD,HR,7,Good
+26,21,High School,Tech,2,Poor
+28,32,Master,HR,10,Excellent
+27,23,High School,Sales,6,Good
+31,33,Master,Sales,3,Poor
+53,3,High School,Sales,3,Poor
+52,18,Master,Sales,9,Very Good
+42,25,High School,Finance,7,Good
+43,31,Bachelor,Sales,5,Average
+56,3,High School,Finance,10,Excellent
+54,24,High School,Finance,7,Good
+59,32,Bachelor,Sales,9,Very Good
+41,22,PhD,Sales,1,Poor
+46,23,PhD,Tech,7,Good
+54,2,High School,HR,6,Good
+20,27,Bachelor,Sales,10,Excellent
+54,2,High School,Tech,9,Very Good
+56,26,Master,Tech,1,Poor
+33,17,Master,HR,4,Average
+22,33,High School,Finance,9,Very Good
+20,9,PhD,Sales,4,Average
+24,39,PhD,HR,10,Excellent
+45,29,High School,Sales,3,Poor
+33,26,High School,Tech,9,Very Good
+58,35,Master,Tech,2,Poor
+46,25,PhD,Finance,4,Average
+28,24,High School,Tech,6,Good
+34,13,Master,Tech,2,Poor
+34,7,PhD,HR,8,Very Good
+45,36,Bachelor,Sales,8,Very Good
+32,20,Master,Sales,1,Poor
+51,1,PhD,HR,3,Poor
+58,8,PhD,Finance,10,Excellent
+51,16,Master,Sales,9,Very Good
+23,14,Bachelor,Tech,5,Average
+49,12,Master,Sales,6,Good
+56,23,PhD,Tech,4,Average
+42,15,High School,Finance,10,Excellent
+58,28,High School,HR,2,Poor
+34,34,Master,Sales,8,Very Good
+48,2,PhD,HR,6,Good
+55,32,High School,Sales,5,Average
+32,23,PhD,Tech,9,Very Good
+51,22,Master,HR,1,Poor
+26,25,High School,Sales,5,Average
+41,22,PhD,Tech,6,Good
+47,22,High School,HR,5,Average
+21,6,Master,HR,6,Good
+25,15,PhD,Sales,6,Good
+47,37,High School,Sales,7,Good
+47,33,Master,Sales,4,Average
+39,8,High School,Tech,8,Very Good
+49,5,High School,Sales,7,Good
+30,39,Bachelor,HR,9,Very Good
+47,4,Bachelor,HR,7,Good
+44,6,Master,Sales,3,Poor
+58,32,Bachelor,Sales,3,Poor
+52,30,Master,Finance,8,Very Good
+20,35,Bachelor,HR,5,Average
+46,16,High School,Tech,4,Average
+32,13,Master,Finance,8,Very Good
+22,30,Master,Sales,6,Good
+58,19,High School,Sales,2,Poor
+25,17,Master,HR,4,Average
+27,19,Master,Sales,4,Average
+46,28,Bachelor,Tech,6,Good
+28,26,Master,HR,6,Good
+56,37,PhD,Sales,1,Poor
+52,26,High School,HR,8,Very Good
+43,23,Bachelor,Sales,6,Good
+34,9,Bachelor,Sales,3,Poor
+51,12,PhD,Sales,9,Very Good
+51,1,High School,Tech,2,Poor
+43,1,High School,Tech,8,Very Good
+31,34,Bachelor,HR,10,Excellent
+58,32,Master,Sales,3,Poor
+21,25,Bachelor,Sales,5,Average
+22,1,High School,Tech,6,Good
+56,16,PhD,Sales,10,Excellent
+36,39,Bachelor,Tech,6,Good
+21,5,High School,Sales,4,Average
+21,22,Bachelor,HR,3,Poor
+47,29,Master,Sales,4,Average
+42,3,Bachelor,Sales,1,Poor
+56,12,Bachelor,Finance,4,Average
+51,26,High School,Tech,1,Poor
+52,16,High School,Sales,1,Poor
+20,37,High School,Sales,10,Excellent
+38,22,Bachelor,Finance,6,Good
+21,29,Master,Finance,5,Average
+45,14,PhD,Tech,4,Average
+51,28,PhD,Finance,3,Poor
+25,5,High School,HR,1,Poor
+51,30,High School,Finance,6,Good
+23,5,Bachelor,HR,2,Poor
+30,12,PhD,Tech,8,Very Good
+36,16,High School,Tech,10,Excellent
+57,26,Master,Tech,5,Average
+43,26,Master,Tech,7,Good
+24,21,High School,Tech,10,Excellent
+53,39,High School,HR,2,Poor
+25,36,PhD,HR,8,Very Good
+41,33,PhD,Tech,2,Poor
+30,30,Bachelor,Finance,4,Average
+35,37,PhD,Sales,1,Poor
+52,23,Master,Tech,5,Average
+28,10,Master,Finance,9,Very Good
+25,5,High School,Sales,1,Poor
+35,36,PhD,Tech,9,Very Good
+48,34,Bachelor,Tech,8,Very Good
+22,31,Master,HR,6,Good
+39,10,Master,Sales,7,Good
+55,19,Bachelor,Sales,3,Poor
+58,31,Bachelor,HR,2,Poor
+48,3,PhD,HR,1,Poor
+34,24,Master,HR,3,Poor
+27,32,High School,Finance,6,Good
+40,22,Master,Sales,8,Very Good
+58,23,High School,Finance,9,Very Good
+38,2,Bachelor,Finance,7,Good
+42,27,Master,HR,4,Average
+30,2,High School,Tech,6,Good
+30,26,Bachelor,Tech,5,Average
+43,17,Master,Finance,8,Very Good
+55,33,Master,Finance,1,Poor
+59,9,High School,HR,1,Poor
+43,39,High School,Finance,6,Good
+22,29,High School,HR,10,Excellent
+41,26,Bachelor,Tech,2,Poor
+21,35,High School,Tech,5,Average
+43,25,Master,Sales,1,Poor
+49,24,Master,Tech,7,Good
+57,13,High School,Finance,1,Poor
+21,7,High School,Tech,4,Average
+40,36,PhD,HR,9,Very Good
+52,20,Master,Tech,1,Poor
+31,1,Bachelor,Sales,4,Average
+41,8,PhD,Tech,6,Good
+44,16,High School,HR,6,Good
+46,14,High School,HR,8,Very Good
+47,12,Master,Finance,1,Poor
+35,23,High School,Tech,7,Good
+34,15,Bachelor,HR,1,Poor
+22,28,Master,Sales,7,Good
+56,34,High School,Finance,3,Poor
+26,2,Master,Sales,8,Very Good
+40,32,High School,Tech,3,Poor
+28,23,High School,Tech,1,Poor
+58,22,High School,Tech,8,Very Good
+37,25,Bachelor,Finance,3,Poor
+23,22,Bachelor,HR,2,Poor
+44,22,Master,Finance,1,Poor
+33,6,High School,Sales,3,Poor
+28,15,High School,Finance,2,Poor
+45,37,Bachelor,Sales,2,Poor
+21,33,High School,Finance,6,Good
+39,8,Bachelor,HR,1,Poor
+47,5,High School,Sales,2,Poor
+26,39,Master,Tech,6,Good
+27,4,High School,Tech,3,Poor
+54,6,High School,Finance,4,Average
+33,32,PhD,Tech,1,Poor
+36,30,Bachelor,Sales,8,Very Good
+55,35,High School,Tech,7,Good
+59,16,High School,HR,7,Good
+23,13,PhD,HR,3,Poor
+21,30,PhD,Finance,10,Excellent
+25,19,Bachelor,Sales,10,Excellent
+23,17,PhD,HR,3,Poor
+48,19,Master,HR,2,Poor
+37,28,PhD,Sales,1,Poor
+45,26,Master,Tech,7,Good
+53,37,Bachelor,Tech,7,Good
+29,26,Bachelor,Finance,2,Poor
+55,23,Bachelor,Tech,7,Good
+33,9,Bachelor,Sales,8,Very Good
+50,12,Bachelor,HR,1,Poor
+34,1,Master,Tech,9,Very Good
+27,1,Master,Finance,7,Good
+33,34,Bachelor,Tech,3,Poor
+42,32,PhD,Sales,8,Very Good
+59,25,High School,Finance,7,Good
+40,1,Bachelor,Tech,8,Very Good
+35,16,PhD,Finance,6,Good
+37,39,High School,Sales,9,Very Good
+43,5,Bachelor,HR,5,Average
+45,22,Bachelor,Sales,3,Poor
+44,29,Master,Sales,3,Poor
+48,3,High School,Sales,1,Poor
+34,12,High School,Sales,8,Very Good
+20,26,PhD,HR,2,Poor
+44,16,Master,HR,3,Poor
+26,37,Master,Finance,8,Very Good
+28,22,Master,Tech,8,Very Good
+43,29,Master,HR,4,Average
+20,14,High School,HR,4,Average
+27,28,High School,Tech,5,Average
+43,5,Bachelor,HR,6,Good
+30,30,Bachelor,Sales,5,Average
+36,5,Master,Sales,7,Good
+27,12,Master,Tech,2,Poor
+54,16,Master,Finance,7,Good
+54,26,Bachelor,Finance,10,Excellent
+52,26,PhD,Tech,7,Good
+24,21,PhD,Tech,1,Poor
+58,39,Bachelor,Sales,7,Good
+47,36,Bachelor,Finance,5,Average
+26,33,Bachelor,HR,3,Poor
+28,30,Bachelor,Sales,3,Poor
+27,37,Bachelor,Tech,4,Average
+31,23,Bachelor,Finance,2,Poor
+53,10,Master,HR,2,Poor
+52,5,Master,HR,1,Poor
+42,36,Master,Sales,5,Average
+43,34,Master,Finance,4,Average
+56,31,Bachelor,Finance,10,Excellent
+54,10,PhD,Tech,2,Poor
+59,19,High School,Finance,3,Poor
+41,32,Bachelor,Finance,7,Good
+46,1,High School,Sales,7,Good
+54,5,PhD,Finance,4,Average
+20,4,Master,HR,5,Average
+54,16,PhD,Sales,5,Average
+56,24,Bachelor,Sales,6,Good
+33,16,Master,Tech,9,Very Good
+22,2,Bachelor,Finance,2,Poor
+20,28,Master,Tech,5,Average
+24,32,High School,HR,3,Poor
+45,27,High School,Sales,4,Average
+33,20,High School,Sales,10,Excellent
+58,24,PhD,Sales,6,Good
+46,12,Bachelor,HR,8,Very Good
+28,35,PhD,HR,1,Poor
+34,33,High School,Tech,10,Excellent
+34,33,Bachelor,Tech,8,Very Good
+45,37,High School,Tech,7,Good
+32,12,PhD,Finance,1,Poor
+51,3,PhD,Sales,2,Poor
+58,1,PhD,Sales,3,Poor
+51,33,High School,Tech,1,Poor
+23,10,Bachelor,Sales,9,Very Good
+49,29,Bachelor,Tech,8,Very Good
+56,13,High School,Finance,2,Poor
+42,12,Bachelor,Finance,9,Very Good
+58,31,High School,HR,7,Good
+34,2,Bachelor,Finance,9,Very Good
+48,35,Master,Tech,6,Good
+55,23,Master,Finance,6,Good
+32,17,PhD,HR,4,Average
+51,26,Master,Sales,10,Excellent
+26,8,Master,Tech,10,Excellent
+41,29,Master,Sales,2,Poor
+47,26,High School,HR,7,Good
+21,10,Master,HR,5,Average
+25,26,Master,HR,6,Good
+47,34,PhD,Sales,2,Poor
+47,7,Master,Sales,5,Average
+39,4,Master,Sales,10,Excellent
+49,11,Bachelor,Sales,4,Average
+30,29,PhD,HR,9,Very Good
+47,36,PhD,HR,6,Good
+44,25,PhD,Tech,2,Poor
+58,21,PhD,Tech,1,Poor
+52,36,PhD,Sales,5,Average
+20,10,PhD,Finance,9,Very Good
+46,37,High School,Finance,6,Good
+32,9,Master,HR,10,Excellent
+22,24,PhD,HR,7,Good
+58,35,Master,HR,5,Average
+25,35,Master,Tech,10,Excellent
+27,36,High School,Tech,6,Good
+46,18,PhD,HR,5,Average
+28,39,Bachelor,HR,9,Very Good
+56,32,High School,HR,6,Good
+52,24,Bachelor,Finance,8,Very Good
+43,23,Master,Tech,2,Poor
+34,32,Master,Finance,9,Very Good
+51,37,High School,Finance,5,Average
+51,12,High School,HR,7,Good
+43,13,Bachelor,HR,10,Excellent
+31,23,PhD,Sales,1,Poor
+58,25,Bachelor,Sales,10,Excellent
+21,35,High School,Finance,5,Average
+22,30,Bachelor,Tech,10,Excellent
+56,17,High School,HR,2,Poor
+36,20,Bachelor,HR,6,Good
+21,25,High School,Finance,1,Poor
+21,22,High School,Sales,3,Poor
+47,13,High School,Tech,5,Average
+42,19,PhD,Sales,4,Average
+56,36,Bachelor,Sales,3,Poor
+51,12,Bachelor,Sales,10,Excellent
+52,19,Bachelor,Sales,5,Average
+20,12,High School,HR,8,Very Good
+38,9,Bachelor,HR,4,Average
+21,7,Bachelor,Sales,1,Poor
+45,28,High School,Tech,7,Good
+51,14,Master,Finance,8,Very Good
+25,31,High School,Tech,3,Poor
+51,19,Bachelor,Tech,6,Good
+23,16,High School,Tech,2,Poor
+30,5,Master,Sales,7,Good
+36,35,High School,HR,8,Very Good
+57,12,Bachelor,Tech,6,Good
+43,25,Master,Sales,6,Good
+24,21,PhD,Tech,5,Average
+53,36,Bachelor,Tech,8,Very Good
+25,23,Master,Sales,1,Poor
+41,16,Master,HR,10,Excellent
+30,39,PhD,HR,4,Average
+35,39,High School,Finance,4,Average
+52,14,High School,Sales,3,Poor
+28,31,Bachelor,Finance,3,Poor
+25,5,PhD,Finance,4,Average
+35,35,High School,Finance,1,Poor
+48,23,PhD,HR,2,Poor
+22,29,High School,Sales,9,Very Good
+39,11,Master,Finance,10,Excellent
+55,18,High School,Sales,2,Poor
+38,12,PhD,Sales,5,Average
+45,9,Master,HR,9,Very Good
+22,10,Master,Finance,9,Very Good
+38,17,Master,Finance,8,Very Good
+39,38,PhD,Sales,1,Poor
+51,7,Bachelor,Tech,1,Poor
+26,13,Bachelor,HR,9,Very Good
+52,9,Bachelor,HR,8,Very Good
+59,27,PhD,HR,10,Excellent
+58,2,Master,HR,9,Very Good
+37,5,Bachelor,Finance,7,Good
+59,29,PhD,Finance,3,Poor
+20,37,Bachelor,Tech,3,Poor
+30,38,High School,HR,2,Poor
+47,19,Bachelor,HR,5,Average
+44,8,Bachelor,Sales,3,Poor
+42,1,Master,Finance,6,Good
+50,22,PhD,HR,2,Poor
+49,17,Master,Tech,3,Poor
+54,7,Master,Tech,5,Average
+26,25,Master,Finance,1,Poor
+35,4,Master,Tech,1,Poor
+45,36,Master,Tech,10,Excellent
+21,6,Bachelor,Finance,9,Very Good
+20,31,Master,HR,7,Good
+31,19,Master,HR,1,Poor
+24,39,PhD,Tech,8,Very Good
+56,27,High School,Tech,3,Poor
+51,10,Bachelor,HR,8,Very Good
+28,26,Bachelor,Finance,5,Average
+54,19,Bachelor,Tech,1,Poor
+38,39,Master,Sales,7,Good
+35,3,Master,Finance,5,Average
+22,13,Master,Tech,6,Good
+39,28,PhD,Tech,6,Good
+43,20,High School,Sales,8,Very Good
+52,28,Master,Sales,9,Very Good
+43,8,High School,HR,2,Poor
+30,39,PhD,Finance,9,Very Good
+27,1,Bachelor,Finance,10,Excellent
+55,3,Master,HR,9,Very Good
+57,13,High School,Finance,10,Excellent
+59,28,High School,Finance,10,Excellent
+39,25,Master,Finance,7,Good
+54,33,Bachelor,Finance,1,Poor
+44,38,Bachelor,Finance,7,Good
+54,6,Bachelor,Sales,10,Excellent
+44,32,PhD,Finance,5,Average
+48,21,High School,Sales,6,Good
+37,16,High School,Finance,10,Excellent
+37,21,High School,HR,7,Good
+21,11,PhD,Tech,5,Average
+54,37,High School,Sales,7,Good
+35,36,PhD,Finance,9,Very Good
+55,35,Bachelor,HR,3,Poor
+52,19,Master,Tech,8,Very Good
+23,20,High School,Sales,2,Poor
+52,18,High School,Tech,7,Good
+33,14,Bachelor,HR,2,Poor
+40,15,Master,Sales,4,Average
+39,31,PhD,Tech,7,Good
+27,1,Master,Finance,3,Poor
+26,3,Bachelor,Sales,2,Poor
+22,16,Bachelor,Tech,10,Excellent
+36,23,Master,HR,7,Good
+52,11,PhD,HR,1,Poor
+31,12,PhD,Sales,8,Very Good
+41,10,High School,Tech,3,Poor
+41,32,PhD,Sales,2,Poor
+49,16,Master,Sales,3,Poor
+57,8,Bachelor,Tech,5,Average
+57,38,High School,Tech,8,Very Good
+27,12,High School,Finance,10,Excellent
+46,24,Bachelor,Tech,7,Good
+46,28,PhD,HR,7,Good
+53,8,Bachelor,Sales,7,Good
+40,28,PhD,Sales,8,Very Good
+49,36,Bachelor,HR,1,Poor
+52,26,Master,Tech,4,Average
+47,8,PhD,HR,6,Good
+52,28,Master,HR,9,Very Good
+24,28,High School,Finance,2,Poor
+38,37,Bachelor,HR,1,Poor
+23,36,High School,Sales,10,Excellent
+54,27,High School,HR,2,Poor
+36,17,High School,Sales,7,Good
+47,9,High School,Sales,3,Poor
+49,33,Bachelor,Sales,10,Excellent
+48,20,High School,Tech,2,Poor
+25,13,Bachelor,Finance,7,Good
+54,28,Bachelor,Sales,2,Poor
+56,29,Master,Sales,3,Poor
+43,13,PhD,Tech,7,Good
+48,35,PhD,Sales,4,Average
+50,6,Bachelor,HR,1,Poor
+54,18,Master,HR,5,Average
+52,5,Bachelor,Finance,9,Very Good
+40,25,Bachelor,Sales,8,Very Good
+51,2,Bachelor,Tech,9,Very Good
+42,10,Master,HR,10,Excellent
+52,30,PhD,Tech,9,Very Good
+22,5,Master,Tech,7,Good
+37,33,High School,HR,4,Average
+44,1,Master,Tech,5,Average
+58,30,Bachelor,Sales,9,Very Good
+48,11,High School,Tech,4,Average
+34,28,Bachelor,HR,10,Excellent
+27,25,High School,HR,5,Average
+40,39,Bachelor,Sales,9,Very Good
+58,33,Master,Finance,8,Very Good
+38,1,PhD,Sales,3,Poor
+42,27,High School,Sales,1,Poor
+30,13,High School,Tech,3,Poor
+30,3,PhD,Tech,4,Average
+43,39,High School,Sales,2,Poor
+55,6,High School,HR,1,Poor
+59,8,Bachelor,Tech,7,Good
+43,27,High School,Finance,8,Very Good
+22,9,Master,Tech,7,Good
+41,37,Master,Tech,5,Average
+21,33,PhD,Finance,1,Poor
+43,24,High School,Sales,7,Good
+49,15,PhD,Finance,7,Good
+57,32,Master,Sales,9,Very Good
+21,32,High School,Sales,3,Poor
+40,24,High School,Sales,9,Very Good
+52,12,PhD,Finance,1,Poor
+31,39,Master,Sales,1,Poor
+41,2,High School,HR,4,Average
+44,3,PhD,Finance,9,Very Good
+46,37,Master,HR,6,Good
+47,17,PhD,Sales,3,Poor
+35,2,Bachelor,Tech,1,Poor
+34,2,High School,Sales,4,Average
+22,28,Bachelor,HR,9,Very Good
+56,23,Master,HR,3,Poor
+26,37,Bachelor,Finance,9,Very Good
+40,32,Bachelor,Tech,7,Good
+28,33,Master,Finance,4,Average
+58,1,PhD,HR,3,Poor
+37,19,Bachelor,Sales,10,Excellent
+23,2,PhD,Tech,5,Average
+44,26,Bachelor,Sales,5,Average
+33,32,PhD,Sales,3,Poor
+28,6,Master,Tech,9,Very Good
+45,32,Bachelor,Finance,4,Average
+21,4,Master,Sales,5,Average
+39,11,Bachelor,HR,4,Average
+47,17,Master,Sales,5,Average
+26,38,Master,Tech,7,Good
+27,24,Bachelor,Tech,9,Very Good
+54,5,Bachelor,Tech,7,Good
+33,34,Bachelor,Finance,5,Average
+36,6,High School,Sales,10,Excellent
+55,22,PhD,Finance,10,Excellent
+59,11,High School,Finance,7,Good
+23,16,High School,Tech,10,Excellent
+21,33,Master,Tech,5,Average
+25,9,Bachelor,Finance,3,Poor
+23,6,PhD,Sales,7,Good
+48,16,Master,HR,2,Poor
+37,29,High School,Finance,9,Very Good
+45,3,Bachelor,Sales,10,Excellent
+53,20,Master,Tech,10,Excellent
+29,36,Bachelor,Tech,1,Poor
+55,19,Master,Sales,6,Good
+33,26,Bachelor,HR,7,Good
+50,3,High School,Tech,8,Very Good
+34,19,PhD,Tech,10,Excellent
+27,20,High School,Tech,9,Very Good
+33,32,PhD,Sales,2,Poor
+42,7,Bachelor,Finance,10,Excellent
+59,33,Master,Tech,2,Poor
+40,39,High School,Finance,5,Average
+35,18,PhD,HR,5,Average
+37,1,High School,Tech,6,Good
+43,11,PhD,Tech,3,Poor
+45,28,High School,HR,8,Very Good
+44,25,PhD,Tech,1,Poor
+48,23,PhD,Finance,6,Good
+34,31,Bachelor,Sales,4,Average
+20,30,PhD,Finance,1,Poor
+44,35,Bachelor,Sales,7,Good
+26,7,PhD,Sales,9,Very Good
+28,16,Master,Finance,4,Average
+43,26,Master,Finance,4,Average
+20,2,Master,Finance,6,Good
+27,1,PhD,Finance,3,Poor
+43,12,Bachelor,HR,6,Good
+30,5,Bachelor,Tech,7,Good
+36,37,PhD,Sales,10,Excellent
+27,32,Master,Finance,10,Excellent
+54,9,Master,Finance,3,Poor
+54,35,Bachelor,Finance,7,Good
+52,19,Master,HR,3,Poor
+24,16,High School,Finance,2,Poor
+58,3,Bachelor,Finance,10,Excellent
+47,20,Master,Finance,4,Average
+26,24,Bachelor,Tech,8,Very Good
+28,33,High School,HR,9,Very Good
+27,24,Bachelor,Finance,7,Good
+31,11,Bachelor,Sales,1,Poor
+53,8,Bachelor,Sales,3,Poor
+52,36,Bachelor,Sales,9,Very Good
+42,38,High School,HR,1,Poor
+43,20,PhD,HR,9,Very Good
+56,35,Bachelor,Sales,8,Very Good
+54,25,Bachelor,Finance,1,Poor
+59,35,Master,HR,6,Good
+41,25,Bachelor,Sales,5,Average
+46,29,Master,Sales,6,Good
+54,18,PhD,Finance,10,Excellent
+20,18,High School,Tech,5,Average
+54,2,High School,HR,6,Good
+56,35,PhD,Finance,5,Average
+33,16,High School,Sales,5,Average
+22,36,PhD,Sales,4,Average
+20,33,PhD,Finance,3,Poor
+24,4,PhD,HR,3,Poor
+45,33,High School,Tech,4,Average
+33,14,Master,Tech,9,Very Good
+58,21,PhD,Sales,2,Poor
+46,20,Bachelor,HR,9,Very Good
+28,8,High School,Tech,1,Poor
+34,7,PhD,HR,1,Poor
+34,3,PhD,HR,5,Average
+45,17,Bachelor,Sales,6,Good
+32,33,Master,Tech,6,Good
+51,12,Master,Finance,3,Poor
+58,22,Master,Sales,7,Good
+51,22,PhD,Tech,9,Very Good
+23,30,PhD,Tech,10,Excellent
+49,38,PhD,Tech,8,Very Good
+56,38,High School,Tech,6,Good
+42,8,Bachelor,Tech,8,Very Good
+58,27,PhD,HR,5,Average
+34,27,Bachelor,Sales,8,Very Good
+48,34,Bachelor,HR,10,Excellent
+55,21,Master,Finance,4,Average
+32,30,High School,Tech,10,Excellent
+51,33,PhD,Sales,8,Very Good
+26,28,Master,Tech,10,Excellent
+41,33,Master,Sales,2,Poor
+47,5,PhD,HR,5,Average
+21,19,Bachelor,Sales,9,Very Good
+25,4,Master,Finance,4,Average
+47,35,Bachelor,Finance,6,Good
+47,17,High School,Sales,1,Poor
+39,28,Bachelor,Sales,9,Very Good
