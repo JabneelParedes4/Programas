@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Página 1 - Tiendas y Recomendaciones</title>
+
+  <link rel="stylesheet" href="/css/theme.css">
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  />
+</head>
+
+<body>
+<header class="aurrera-topbar">
+
+  <div class="topbar-inner">
+
+    <div class="brand">
+
+      <img
+        src="/img/aurrera-logo.svg"
+        alt="Aurrera"
+      >
+
+      <div class="brand-text">
+
+        <h1>
+          Página 1 · Análisis comercial
+        </h1>
+
+        <p>
+          Asociación de productos y comportamiento de compra
+        </p>
+
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="/">Inicio</a>
+
+      <a href="/tiendas.html">Tiendas</a>
+
+      <a href="/despensa.html">Despensa</a>
+
+      <a href="/horarios.html">Horarios</a>
+
+      <a href="/clientes.html">Clientes</a>
+
+    </nav>
+
+  </div>
+
+</header>
+<main class="page">
+
+<section class="hero aurrera-hero">
+
+  <h2>
+
+    <span class="material-symbols-outlined hero-icon">
+      storefront
+    </span>
+
+    Consumo inteligente
+
+  </h2>
+
+  <p>
+    Lista de tiendas, productos destacados, carrito inteligente y recomendaciones basadas en asociaciones de compra y comportamiento de consumo.
+  </p>
+
+</section>
+
+<section class="tiendas-top-grid">
+
+  <section class="card">
+    <h2>
+
+  <span class="material-symbols-outlined title-icon">
+    storefront
+  </span>
+
+  Lista de tiendas
+
+</h2>
+    <div id="tiendas" class="stores-list"></div>
+  </section>
+
+  <section class="card">
+    <h2>
+
+  <span class="material-symbols-outlined title-icon">
+    workspace_premium
+  </span>
+
+  Productos destacados
+
+</h2>
+    <div id="destacados" class="stores-list"></div>
+  </section>
+
+  <section class="card">
+    <h2>
+
+  <span class="material-symbols-outlined title-icon">
+    shopping_cart
+  </span>
+
+  Carrito
+</h2>
+    <div id="carrito"></div>
+</section>
+</section>
+
+<section class="full-width-section">
+
+  <section class="card">
+
+    <h2>
+
+      <span class="material-symbols-outlined title-icon">
+        inventory_2
+      </span>
+
+      Productos disponibles
+
+    </h2>
+
+    <div id="productos" class="productos-grid"></div>
+
+  </section>
+
+</section>
+
+<section class="full-width-section">
+
+  <section class="card">
+
+    <h2>
+
+      <span class="material-symbols-outlined title-icon">
+        recommend
+      </span>
+
+      Recomendaciones
+
+    </h2>
+
+    <div id="recomendaciones" class="productos-grid"></div>
+
+  </section>
+
+</section>
+</main>
+
+<script>
+  let productos = [];
+  let carrito = [];
+  let sucursalActual = "";
+
+  function capitalizar(texto) {
+
+  if (!texto) return '';
+
+  return texto.charAt(0).toUpperCase() +
+         texto.slice(1).toLowerCase();
+}
+
+  async function cargarDatos() {
+    await cargarTiendas();
+    await cargarProductosDestacados();
+    await cargarProductos();
+    renderCarrito();
+    renderRecomendaciones([]);
+  }
+
+  async function cargarTiendas() {
+
+  const res = await fetch('/api/tiendas');
+  const data = await res.json();
+
+  const cont =
+    document.getElementById('tiendas');
+
+  cont.innerHTML = '';
+
+  if (!data || data.length === 0) {
+
+    cont.innerHTML = `
+      <p class="empty">
+        No hay sucursales disponibles.
+      </p>
+    `;
+
+    return;
+  }
+
+  // TODAS
+  cont.innerHTML += `
+    <div
+      class="store-item ${sucursalActual === '' ? 'active' : ''}"
+      onclick="seleccionarSucursal('')"
+    >
+      Todas las sucursales
+    </div>
+  `;
+
+  // SUCURSALES
+  data.forEach(tienda => {
+
+    cont.innerHTML += `
+      <div
+        class="store-item ${sucursalActual === tienda ? 'active' : ''}"
+        onclick="seleccionarSucursal('${tienda}')"
+      >
+        ${tienda}
+      </div>
+    `;
+  });
+}
+
+async function seleccionarSucursal(sucursal) {
+
+  sucursalActual = sucursal;
+
+  carrito = [];
+
+  renderCarrito();
+
+  await cargarTiendas();
+
+  await cargarProductosDestacados();
+
+  await cargarProductos();
+
+  renderRecomendaciones([]);
+}
+
+  async function cargarProductosDestacados() {
+  let url = '/api/productos-destacados';
+
+if (sucursalActual) {
+  url += `?sucursal=${encodeURIComponent(sucursalActual)}`;
+}
+
+const res = await fetch(url);
+  const data = await res.json();
+
+  const cont = document.getElementById('destacados');
+  cont.innerHTML = '';
+
+  if (!data || data.length === 0) {
+    cont.innerHTML = '<p class="empty">No hay productos destacados. Primero entrena el modelo.</p>';
+    return;
+  }
+
+  data.forEach(p => {
+    cont.innerHTML += `
+      <div class="item destacado">
+         <div class="product-info">
+        <span>
+          <strong>${capitalizar(p.producto)}</strong>
+          <small>${p.ventas} ventas</small>
+        </span>
+        <button onclick="agregarProducto('${p.producto}')">
+          Agregar
+        </button>
+      </div>
+      </div>
+    `;
+  });
+}
+
+  async function cargarProductos() {
+  let url = '/api/productos-precios';
+
+if (sucursalActual) {
+  url += `?sucursal=${encodeURIComponent(sucursalActual)}`;
+}
+
+const res = await fetch(url);
+  productos = await res.json();
+
+  const cont = document.getElementById('productos');
+  cont.innerHTML = '';
+
+  if (!productos || productos.length === 0 || productos.error) {
+    cont.innerHTML = '<p class="empty">No hay productos. Primero entrena el modelo.</p>';
+    return;
+  }
+
+  // AGRUPAR POR CATEGORIA
+const categorias = {};
+
+productos.forEach(item => {
+
+  const categoria =
+    item.categoria || 'Sin categoría';
+
+  if (!categorias[categoria]) {
+    categorias[categoria] = [];
+  }
+
+  categorias[categoria].push(item);
+});
+
+// RENDER
+Object.keys(categorias).forEach(categoria => {
+
+  cont.innerHTML += `
+    <div class="categoria-titulo">
+      ${capitalizar(categoria)}
+    </div>
+  `;
+
+  categorias[categoria].forEach(item => {
+
+    cont.innerHTML += `
+      <div class="item">
+
+        <span>
+          <strong>
+            ${capitalizar(item.producto)}
+          </strong>
+
+          <br>
+
+          <small>
+            $${Number(item.precio || 0).toFixed(2)}
+          </small>
+        </span>
+
+        <button onclick="agregarProducto('${item.producto}')">
+          Agregar
+        </button>
+
+      </div>
+    `;
+  });
+});
+}
+
+  function agregarProducto(producto) {
+    if (!carrito.includes(producto)) {
+      carrito.push(producto);
+      renderCarrito();
+      obtenerRecomendaciones();
+    }
+  }
+
+  function quitarProducto(producto) {
+    carrito = carrito.filter(p => p !== producto);
+    renderCarrito();
+
+    if (carrito.length === 0) {
+      renderRecomendaciones([]);
+    } else {
+      obtenerRecomendaciones();
+    }
+  }
+
+  function renderCarrito() {
+    const cont = document.getElementById('carrito');
+    cont.innerHTML = '';
+
+    if (carrito.length === 0) {
+      cont.innerHTML = '<p class="empty">Carrito vacío</p>';
+      return;
+    }
+
+    carrito.forEach(producto => {
+      cont.innerHTML += `
+        <div class="item">
+                   <div class="product-info">
+          <span>${capitalizar(producto)}</span>
+          </div>
+          <button class="btn-danger" onclick="quitarProducto('${producto}')">Quitar</button>
+        </div>
+      `;
+    });
+  }
+
+  async function obtenerRecomendaciones() {
+    const query = encodeURIComponent(carrito.join(','));
+    let url =
+  `/api/recomendar?carrito=${query}`;
+
+if (sucursalActual) {
+  url += `&sucursal=${encodeURIComponent(sucursalActual)}`;
+}
+
+const res = await fetch(url);
+    const data = await res.json();
+
+    renderRecomendaciones(data.recomendaciones || []);
+  }
+
+  function renderRecomendaciones(recomendaciones) {
+    const cont = document.getElementById('recomendaciones');
+    cont.innerHTML = '';
+
+    if (!recomendaciones || recomendaciones.length === 0) {
+      cont.innerHTML = '<p class="empty">Agrega productos al carrito para generar recomendaciones.</p>';
+      return;
+    }
+
+    recomendaciones.forEach(r => {
+  cont.innerHTML += `
+    <div class="item destacado">
+      <span>
+        <strong>${capitalizar(r.producto)}</strong><br>
+        <small>Precio: $${Number(r.precio).toFixed(2)}</small>
+      </span>
+      <button onclick="agregarProducto('${r.producto}')">Agregar al carrito</button>
+    </div>
+  `;
+});
+  }
+
+  cargarDatos();
+</script>
+
+<div class="info-box aurrera-info">
+  <h2>
+
+  <span class="material-symbols-outlined title-icon">
+    description
+  </span>
+
+  Fuente, naturaleza y volumen de los datos
+
+</h2>
+
+  <p>
+    Este módulo utiliza información proveniente del archivo
+    <strong>dataset_walmart.csv</strong>, el cual contiene registros históricos
+    de compras realizadas por clientes en distintas sucursales comerciales.
+  </p>
+
+  <p>
+    Para el análisis de recomendaciones se seleccionaron variables relacionadas
+    con productos, compras y precios, debido a que permiten identificar patrones
+    de asociación y comportamiento de consumo entre artículos adquiridos en conjunto.
+  </p>
+
+  <p>
+    Las variables utilizadas fueron:
+  </p>
+
+  <ul>
+    <li><strong>Producto:</strong> utilizado para identificar relaciones de compra entre artículos.</li>
+    <li><strong>Invoice ID:</strong> empleado para detectar compras compartidas dentro de una misma transacción.</li>
+    <li><strong>Precio unitario:</strong> utilizado para mostrar información económica asociada a las recomendaciones.</li>
+    <li><strong>Sucursal:</strong> permite analizar comportamiento comercial por punto de venta.</li>
+  </ul>
+
+  <p>
+    Los datos son de naturaleza <strong>estructurada y transaccional</strong>,
+    ya que representan operaciones comerciales registradas históricamente.
+    El sistema analiza aproximadamente <strong>79,875 registros</strong> mediante
+    modelos de asociación de productos para generar recomendaciones inteligentes
+    orientadas al análisis comercial y apoyo en la toma de decisiones.
+  </p>
+</div>
+<footer class="footer-aurrera">
+  Proyecto de Ingeniería del Conocimiento · ITSOEH · 2026
+</footer>
+</body>
+</html>

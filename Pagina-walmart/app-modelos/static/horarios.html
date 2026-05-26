@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página 3 - Horarios / Picos</title>
+  <link rel="stylesheet" href="/css/theme.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  />
+</head>
+
+<body>
+
+<header>
+
+<header class="aurrera-topbar">
+    <div class="topbar-inner">
+
+    <div class="brand">
+
+      <img
+        src="/img/aurrera-logo.svg"
+        alt="Aurrera"
+      >
+
+      <div class="brand-text">
+<h1>Página 3 · Análisis temporal de concurrencia</h1>
+
+<p>
+  Tendencias horarias y comportamiento comercial
+</p>
+
+      </div>
+    </div>
+
+    <nav class="nav-links">
+
+      <a href="/index.html">Inicio</a>
+
+      <a href="/tiendas.html">Tiendas</a>
+
+      <a href="/despensa.html">Despensa</a>
+
+      <a href="/horarios.html">Horarios</a>
+
+      <a href="/clientes.html">Clientes</a>
+
+    </nav>
+    </div>
+  </div>
+
+</header>
+
+
+<main class="page">
+<section class="hero aurrera-hero">
+
+
+<h2>
+  Análisis temporal · Tendencias comerciales · Concurrencia dinámica
+</h2>
+
+    <p>
+      Identificación de horarios pico, tendencias mensuales, comportamiento por quincena y análisis temporal de concurrencia comercial mediante procesamiento histórico de tickets.
+    </p>
+
+</section>
+
+<div class="analytics-grid">
+
+<div class="analytics-card">
+    <h2>
+
+  <span class="material-symbols-outlined title-icon">
+    schedule
+  </span>
+
+  Horario de mayor concurrencia
+
+</h2>
+
+    <div id="dias" class="dias"></div>
+
+    <div id="mensaje" class="mensaje">
+      Cargando concurrencia...
+    </div>
+
+    <div id="chart" class="chart-wrap">
+
+    </div>
+
+
+    <h2>
+
+  <span class="material-symbols-outlined title-icon">
+    calendar_month
+  </span>
+
+  Tendencias mensuales de concurrencia
+
+</h2>
+
+    <div class="top-controls">
+<div class="branch-filter">
+  <label>Visualizar:</label>
+  <select id="sucursalSeleccionada" onchange="cargarConcurrenciaPeriodo()">
+    <option value="general">General</option>
+  </select>
+</div>
+
+    <div class="calendar-nav">
+      <button onclick="cambiarMes(-1)">◀</button>
+      <div id="mesActual" class="month-title">Mes</div>
+      <button onclick="cambiarMes(1)">▶</button>
+    </div>
+
+    <div id="detallePeriodo">
+    </div>
+    </div>
+</div>
+</div>
+</main>
+<script>
+  let datos = [];
+  let diaSeleccionado = 'LUN';
+  let horaSeleccionada = null;
+  let maxDiaSeleccionado = 0;
+
+  let periodosDisponibles = null;
+  let mesesDisponibles = [];
+  let mesIndexActual = 0;
+  let sucursalActual = 'general';
+
+  async function cargarConcurrencia() {
+    const res = await fetch('/api/concurrencia-semanal');
+    const json = await res.json();
+
+    if (!json.ok) {
+      document.getElementById('mensaje').innerHTML = 'Error cargando concurrencia semanal.';
+      return;
+    }
+
+    datos = json.data;
+    renderDias();
+    renderDia(diaSeleccionado);
+  }
+
+  async function cargarSucursales() {
+  const res = await fetch('/api/sucursales-csv');
+  const data = await res.json();
+
+  if (!data.ok) return;
+
+  const select = document.getElementById('sucursalSeleccionada');
+  select.innerHTML = '<option value="general">General</option>';
+
+  data.sucursales.forEach(s => {
+    select.innerHTML += `<option value="${s}">${s}</option>`;
+  });
+}
+
+  function renderDias() {
+    const cont = document.getElementById('dias');
+    cont.innerHTML = '';
+
+    datos.forEach(d => {
+      cont.innerHTML += `
+        <div class="dia ${d.dia === diaSeleccionado ? 'active' : ''}"
+             onclick="seleccionarDia('${d.dia}')">
+          ${d.dia}
+        </div>
+      `;
+    });
+  }
+
+  function seleccionarDia(dia) {
+    diaSeleccionado = dia;
+    renderDias();
+    renderDia(dia);
+  }
+
+  function renderDia(dia) {
+    const registro = datos.find(d => d.dia === dia);
+    const chart = document.getElementById('chart');
+    const mensaje = document.getElementById('mensaje');
+
+    chart.innerHTML = '';
+    horaSeleccionada = null;
+
+    if (!registro) {
+      mensaje.innerHTML = 'No hay datos para este día.';
+      return;
+    }
+
+    const horasMostrar = [
+      '08:00','09:00','10:00','11:00','12:00','13:00',
+      '14:00','15:00','16:00','17:00','18:00','19:00',
+      '20:00','21:00','22:00'
+    ];
+
+    let max = 0;
+    let horaPico = '';
+    let ventasPico = 0;
+
+    horasMostrar.forEach(h => {
+      const ventas = registro.horas[h] || 0;
+      if (ventas > max) {
+        max = ventas;
+        horaPico = h;
+        ventasPico = ventas;
+      }
+    });
+
+    maxDiaSeleccionado = max;
+
+    if (max === 0) {
+      mensaje.innerHTML = `No hay ventas registradas para ${dia}.`;
+      return;
+    }
+
+    mensaje.innerHTML = construirMensajeConcurrencia(horaPico, ventasPico, max);
+
+    horasMostrar.forEach(h => {
+      const ventas = registro.horas[h] || 0;
+      const altura = Math.max(8, Math.round((ventas / max) * 180));
+      const peakClass = h === horaPico ? 'peak selected' : '';
+
+      const label = ['09:00','12:00','15:00','18:00','21:00'].includes(h)
+        ? formatLabel(h)
+        : '';
+
+      chart.innerHTML += `
+        <div class="bar-box" onclick="seleccionarHora('${h}', ${ventas})">
+          <div class="ventas">${ventas > 0 ? ventas : ''}</div>
+          <div class="bar ${peakClass}" id="bar-${h.replace(':', '-')}" style="height:${altura}px"></div>
+          <div class="hour-label">${label}</div>
+        </div>
+      `;
+    });
+  }
+
+  function seleccionarHora(hora, tickets) {
+    document.querySelectorAll('.bar').forEach(bar => {
+      bar.classList.remove('selected');
+    });
+
+    const id = `bar-${hora.replace(':', '-')}`;
+    const bar = document.getElementById(id);
+
+    if (bar) {
+      bar.classList.add('selected');
+    }
+
+    document.getElementById('mensaje').innerHTML =
+      construirMensajeConcurrencia(hora, tickets, maxDiaSeleccionado);
+  }
+
+  function construirMensajeConcurrencia(hora, tickets, max) {
+
+  const porcentaje = max > 0 ? tickets / max : 0;
+
+  let texto = '';
+  let nivel = '';
+
+  if (porcentaje < 0.34) {
+
+    texto = 'Baja concurrencia comercial';
+    nivel = 'BAJA';
+
+  } else if (porcentaje < 0.70) {
+
+    texto = 'Concurrencia comercial media';
+    nivel = 'MEDIA';
+
+  } else {
+
+    texto = 'Alta concurrencia comercial';
+    nivel = 'ALTA';
+  }
+
+  return `
+    <strong>${formatLabel(hora)}</strong><br>
+    ${texto}<br>
+    <small>${tickets} tickets registrados · Nivel ${nivel}</small>
+  `;
+}
+
+  function formatLabel(hora) {
+    const n = parseInt(hora.split(':')[0]);
+    if (n === 12) return '12 p.m.';
+    if (n > 12) return `${n - 12} p.m.`;
+    return `${n} a.m.`;
+  }
+
+  async function cargarPeriodosDisponibles() {
+    const res = await fetch('/api/periodos-disponibles');
+    const data = await res.json();
+
+    if (!data.ok) return;
+
+    periodosDisponibles = data.periodos;
+    mesesDisponibles = periodosDisponibles.meses || [];
+
+    if (mesesDisponibles.length > 0) {
+      mesIndexActual = 0;
+      actualizarMesActual();
+      cargarConcurrenciaPeriodo();
+    }
+  }
+
+  function cambiarMes(direccion) {
+    if (mesesDisponibles.length === 0) return;
+
+    mesIndexActual += direccion;
+
+    if (mesIndexActual < 0) {
+      mesIndexActual = mesesDisponibles.length - 1;
+    }
+
+    if (mesIndexActual >= mesesDisponibles.length) {
+      mesIndexActual = 0;
+    }
+
+    actualizarMesActual();
+    cargarConcurrenciaPeriodo();
+  }
+
+  function actualizarMesActual() {
+    const periodo = mesesDisponibles[mesIndexActual];
+    document.getElementById('mesActual').textContent = formatearPeriodo(periodo);
+  }
+
+  async function cargarConcurrenciaPeriodo() {
+  if (mesesDisponibles.length === 0) return;
+
+  const periodo = mesesDisponibles[mesIndexActual];
+  const cont = document.getElementById('detallePeriodo');
+
+  sucursalActual = document.getElementById('sucursalSeleccionada')?.value || 'general';
+
+  cont.innerHTML = 'Cargando calendario...';
+
+  const res = await fetch(
+    `/api/concurrencia-periodo?tipo=mes&periodo=${encodeURIComponent(periodo)}&sucursal=${encodeURIComponent(sucursalActual)}`
+  );
+
+  const data = await res.json();
+
+  if (!data.ok || !data.data || data.data.length === 0) {
+    cont.innerHTML = 'No hay datos para este mes.';
+    return;
+  }
+
+  renderCalendarioMes(data.data, periodo);
+}
+
+function renderCalendarioMes(data, periodo) {
+  const cont = document.getElementById('detallePeriodo');
+  cont.innerHTML = '';
+
+  const diasEspeciales = data.filter(d => d.es_quincena || d.es_festivo);
+  const diasNormales = data.filter(d => !d.es_quincena && !d.es_festivo);
+
+  const ticketsHorasPico = data.reduce(
+    (acc, d) => acc + (d.tickets_pico || 0),
+    0
+  );
+
+  const ticketsTotalesMes = data.reduce((acc, d) => {
+    const sumaHoras = Object.values(d.horas || {}).reduce((a, b) => a + b, 0);
+    return acc + sumaHoras;
+  }, 0);
+
+  const promedioDiario = data.length > 0 ? ticketsTotalesMes / data.length : 0;
+
+  const concentracionPico =
+    ticketsTotalesMes > 0
+      ? (ticketsHorasPico / ticketsTotalesMes) * 100
+      : 0;
+
+  const promEspecial = promedio(diasEspeciales.map(d => d.tickets_pico));
+  const promNormal = promedio(diasNormales.map(d => d.tickets_pico));
+  const dif = promEspecial - promNormal;
+
+  const topDias = [...data]
+    .sort((a, b) => b.tickets_pico - a.tickets_pico)
+    .slice(0, 3);
+
+  const horaMasComun = horaMasComunDelMes(data);
+
+  const ticketsMesActual = ticketsTotalesMes;
+  const mesAnterior = obtenerMesAnterior(periodo);
+
+  cont.innerHTML += `
+    <div class="month-summary-grid">
+
+      <div class="summary-card">
+        <span>Tickets del mes</span>
+        <strong>${ticketsTotalesMes}</strong>
+      </div>
+
+      <div class="summary-card">
+        <span>Tickets en horas pico</span>
+        <strong>${ticketsHorasPico}</strong>
+      </div>
+
+      <div class="summary-card">
+        <span>Concentración pico</span>
+        <strong>${concentracionPico.toFixed(1)}%</strong>
+      </div>
+
+      <div class="summary-card">
+        <span>Promedio diario</span>
+        <strong>${promedioDiario.toFixed(0)}</strong>
+      </div>
+
+      <div class="summary-card">
+        <span>Hora pico más común</span>
+        <strong>${horaMasComun || '-'}</strong>
+      </div>
+
+      <div class="summary-card">
+        <span>Días especiales</span>
+        <strong>${diasEspeciales.length}</strong>
+      </div>
+
+    </div>
+
+    <div id="comparacionMesAnterior" class="comparison-box">
+      Comparando con ${formatearPeriodo(mesAnterior)}...
+    </div>
+
+    <div class="period-summary">
+      <strong>${formatearPeriodo(periodo)}</strong><br>
+      En días de quincena o festivos, el pico fue
+      <strong>${dif >= 0 ? '+' : ''}${dif.toFixed(1)} tickets</strong>
+      respecto a días normales.
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <span class="legend-dot legend-high"></span> Alta: top 3 días más concurridos
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot legend-mid"></span> Media: concurrencia intermedia
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot legend-low"></span> Baja: días menos concurridos
+      </div>
+    </div>
+
+    <h3>
+
+  <span class="material-symbols-outlined grupo-icon">
+    local_fire_department
+  </span>
+
+  Días con mayor concurrencia
+
+</h3>
+    <div class="top-days">
+      ${topDias.map((d, index) => `
+        <div class="top-day-card">
+          <strong>${index + 1}. ${d.fecha}</strong>
+          <span>${d.dia}</span>
+          <p>⏰ ${d.hora_pico} · 🎟️ ${d.tickets_pico} tickets</p>
+          <div class="tags">
+            ${d.es_quincena ? '<span class="tag quincena">Quincena</span>' : ''}
+            ${d.es_festivo ? '<span class="tag festivo">Festivo</span>' : ''}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <h3>Calendario del mes</h3>
+
+    <div class="calendar-header">
+      <div>LUN</div><div>MAR</div><div>MIÉ</div><div>JUE</div><div>VIE</div><div>SÁB</div><div>DOM</div>
+    </div>
+
+    <div class="calendar-grid">
+      ${generarCeldasCalendario(data)}
+    </div>
+  `;
+
+  obtenerComparacionMesAnterior(mesAnterior).then(comp => {
+    const box = document.getElementById('comparacionMesAnterior');
+
+    if (!box) return;
+
+    if (!comp) {
+      box.innerHTML = 'No hay datos del mes anterior para comparar.';
+      return;
+    }
+
+    const diferencia = ticketsMesActual - comp.tickets;
+    const porcentaje = comp.tickets > 0 ? (diferencia / comp.tickets) * 100 : 0;
+
+    box.innerHTML = `
+      Mes anterior: <strong>${formatearPeriodo(mesAnterior)}</strong><br>
+      Tickets mes actual: <strong>${ticketsMesActual}</strong><br>
+      Tickets mes anterior: <strong>${comp.tickets}</strong><br>
+      Diferencia: <strong>${diferencia >= 0 ? '+' : ''}${diferencia}</strong>
+      (${porcentaje >= 0 ? '+' : ''}${porcentaje.toFixed(1)}%)
+    `;
+  });
+}
+
+function horaMasComunDelMes(data) {
+  const conteo = {};
+
+  data.forEach(d => {
+    if (!d.hora_pico) return;
+    conteo[d.hora_pico] = (conteo[d.hora_pico] || 0) + 1;
+  });
+
+  let mejorHora = '';
+  let mayor = 0;
+
+  Object.keys(conteo).forEach(hora => {
+    if (conteo[hora] > mayor) {
+      mayor = conteo[hora];
+      mejorHora = hora;
+    }
+  });
+
+  return mejorHora;
+}
+
+  function generarCeldasCalendario(data) {
+  const ordenados = [...data].sort((a, b) => a.fecha.localeCompare(b.fecha));
+
+  const top3Fechas = [...data]
+    .sort((a, b) => b.tickets_pico - a.tickets_pico)
+    .slice(0, 3)
+    .map(d => d.fecha);
+
+    const candidatosVerdes = [...data]
+  .filter(d => !top3Fechas.includes(d.fecha))
+  .sort((a, b) => a.tickets_pico - b.tickets_pico);
+
+let limiteVerde = 0;
+
+if (candidatosVerdes.length > 0) {
+  const indiceLimite = Math.min(2, candidatosVerdes.length - 1);
+  limiteVerde = candidatosVerdes[indiceLimite].tickets_pico;
+}
+
+const verdesFechas = candidatosVerdes
+  .filter(d => d.tickets_pico <= limiteVerde)
+  .map(d => d.fecha);
+  const restantes = data.filter(d => !top3Fechas.includes(d.fecha));
+  const maxRestante = Math.max(...restantes.map(d => d.tickets_pico || 0), 1);
+
+  const primeraFecha = new Date(ordenados[0].fecha + 'T00:00:00');
+  let diaSemana = primeraFecha.getDay();
+  let espacios = diaSemana === 0 ? 6 : diaSemana - 1;
+
+  let html = '';
+
+  for (let i = 0; i < espacios; i++) {
+    html += `<div class="calendar-cell empty-cell"></div>`;
+  }
+
+  ordenados.forEach(d => {
+    const numeroDia = Number(d.fecha.split('-')[2]);
+    const nivel = obtenerNivelConcurrenciaTop3(d, top3Fechas, maxRestante, verdesFechas);
+
+    const claseEspecial = d.es_festivo
+      ? 'festivo-cell'
+      : d.es_quincena
+        ? 'quincena-cell'
+        : '';
+
+    html += `
+      <div class="calendar-cell ${claseEspecial} ${nivel.clase}">
+        <div class="cell-top">
+          <strong>${numeroDia}</strong>
+          <span>${d.dia}</span>
+        </div>
+
+        <div class="cell-info">
+          <div>⏰ ${d.hora_pico}</div>
+          <div>🎟️ ${d.tickets_pico} tickets</div>
+          <div class="traffic-label">${nivel.texto}</div>
+        </div>
+
+        <div class="tags">
+          ${d.es_quincena ? '<span class="tag quincena">Quincena</span>' : ''}
+          ${d.es_festivo ? '<span class="tag festivo">Festivo</span>' : ''}
+        </div>
+      </div>
+    `;
+  });
+
+  return html;
+}
+
+function obtenerNivelConcurrenciaTop3(dia, top3Fechas, maxRestante, verdesFechas) {
+  if (top3Fechas.includes(dia.fecha)) {
+    return {
+      clase: 'traffic-high',
+      texto: 'Alta'
+    };
+  }
+
+  if (verdesFechas.includes(dia.fecha)) {
+    return {
+      clase: 'traffic-low',
+      texto: 'Baja'
+    };
+  }
+
+  return {
+    clase: 'traffic-mid',
+    texto: 'Media'
+  };
+}
+
+  function promedio(lista) {
+    if (!lista || lista.length === 0) return 0;
+    return lista.reduce((a, b) => a + b, 0) / lista.length;
+  }
+
+  function obtenerMesAnterior(periodo) {
+  const [anio, mes] = periodo.split('-').map(Number);
+  const fecha = new Date(anio, mes - 2, 1);
+
+  const nuevoAnio = fecha.getFullYear();
+  const nuevoMes = String(fecha.getMonth() + 1).padStart(2, '0');
+
+  return `${nuevoAnio}-${nuevoMes}`;
+}
+
+async function obtenerComparacionMesAnterior(mesAnterior) {
+  const res = await fetch(
+    `/api/concurrencia-periodo?tipo=mes&periodo=${encodeURIComponent(mesAnterior)}&sucursal=${encodeURIComponent(sucursalActual)}`
+  );
+
+  const data = await res.json();
+
+  if (!data.ok || !data.data || data.data.length === 0) {
+    return null;
+  }
+
+  const tickets = data.data.reduce((acc, d) => {
+  const sumaHoras = Object.values(d.horas || {})
+    .reduce((a, b) => a + b, 0);
+
+  return acc + sumaHoras;
+}, 0);
+
+  return {
+    tickets
+  };
+}
+
+  function formatearPeriodo(periodo) {
+    const partes = periodo.split('-');
+    const anio = partes[0];
+    const mes = Number(partes[1]);
+
+    const meses = [
+      'Enero', 'Febrero', 'Marzo', 'Abril',
+      'Mayo', 'Junio', 'Julio', 'Agosto',
+      'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+    ];
+
+    return `${meses[mes - 1]} ${anio}`;
+  }
+
+cargarConcurrencia();
+cargarSucursales();
+cargarPeriodosDisponibles();
+</script>
+<div class="info-box">
+<span class="material-symbols-outlined title-icon">
+  description
+</span>
+
+Descripción, naturaleza y volumen de los datos
+
+  <p>
+    Este módulo utiliza información temporal proveniente del archivo
+    <strong>dataset_walmart.csv</strong>, el cual contiene registros históricos
+    de transacciones comerciales realizadas entre enero y marzo de 2026.
+  </p>
+
+  <p>
+    Para el análisis de horarios de concurrencia se seleccionaron variables
+    relacionadas con la fecha, hora y frecuencia de compras, debido a que
+    permiten identificar patrones de comportamiento comercial y tendencias
+    de asistencia dentro de las sucursales.
+  </p>
+
+  <p>
+    Las variables utilizadas fueron:
+  </p>
+
+  <ul>
+    <li><strong>Fecha:</strong> permite identificar comportamiento diario, semanal y mensual.</li>
+    <li><strong>Hora:</strong> utilizada para detectar horarios pico y niveles de concurrencia.</li>
+    <li><strong>Invoice ID:</strong> empleado para contabilizar clientes únicos y tickets registrados.</li>
+    <li><strong>Sucursal:</strong> permite comparar tendencias entre diferentes puntos de venta.</li>
+  </ul>
+
+  <p>
+    Los datos son de naturaleza <strong>temporal y secuencial</strong>, ya que
+    representan eventos comerciales ocurridos en diferentes momentos del tiempo.
+    El sistema procesa aproximadamente <strong>79,875 registros históricos</strong>
+    y cerca de <strong>18,294 tickets únicos</strong> para modelar tendencias,
+    horarios pico, comportamiento por quincena y diferencias de concurrencia
+    entre días festivos y días normales.
+  </p>
+</div>
+<footer class="footer-aurrera">
+  Proyecto de Ingeniería del Conocimiento · ITSOEH · 2026
+</footer>
+</body>
+</html>

@@ -1,0 +1,543 @@
+{
+  "dia": [
+    {
+      "periodo": "2026-01-01",
+      "hora": "16:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-01-02",
+      "hora": "16:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-01-03",
+      "hora": "18:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-01-04",
+      "hora": "19:00",
+      "ventas": 29
+    },
+    {
+      "periodo": "2026-01-05",
+      "hora": "15:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-01-06",
+      "hora": "18:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-01-07",
+      "hora": "13:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-01-08",
+      "hora": "11:00",
+      "ventas": 22
+    },
+    {
+      "periodo": "2026-01-09",
+      "hora": "14:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-01-10",
+      "hora": "14:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-01-11",
+      "hora": "9:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-01-12",
+      "hora": "20:00",
+      "ventas": 24
+    },
+    {
+      "periodo": "2026-01-13",
+      "hora": "15:00",
+      "ventas": 31
+    },
+    {
+      "periodo": "2026-01-14",
+      "hora": "11:00",
+      "ventas": 23
+    },
+    {
+      "periodo": "2026-01-15",
+      "hora": "20:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-01-16",
+      "hora": "12:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-01-17",
+      "hora": "17:00",
+      "ventas": 24
+    },
+    {
+      "periodo": "2026-01-18",
+      "hora": "10:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-01-19",
+      "hora": "12:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-01-20",
+      "hora": "17:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-01-21",
+      "hora": "11:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-01-22",
+      "hora": "9:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-01-23",
+      "hora": "9:00",
+      "ventas": 23
+    },
+    {
+      "periodo": "2026-01-24",
+      "hora": "11:00",
+      "ventas": 23
+    },
+    {
+      "periodo": "2026-01-25",
+      "hora": "11:00",
+      "ventas": 29
+    },
+    {
+      "periodo": "2026-01-26",
+      "hora": "20:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-01-27",
+      "hora": "11:00",
+      "ventas": 22
+    },
+    {
+      "periodo": "2026-01-28",
+      "hora": "12:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-01-29",
+      "hora": "18:00",
+      "ventas": 22
+    },
+    {
+      "periodo": "2026-01-30",
+      "hora": "20:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-01-31",
+      "hora": "16:00",
+      "ventas": 23
+    },
+    {
+      "periodo": "2026-02-01",
+      "hora": "11:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-02-02",
+      "hora": "20:00",
+      "ventas": 20
+    },
+    {
+      "periodo": "2026-02-03",
+      "hora": "14:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-02-04",
+      "hora": "15:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-02-05",
+      "hora": "14:00",
+      "ventas": 21
+    },
+    {
+      "periodo": "2026-02-06",
+      "hora": "18:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-02-07",
+      "hora": "18:00",
+      "ventas": 23
+    },
+    {
+      "periodo": "2026-02-08",
+      "hora": "17:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-02-09",
+      "hora": "19:00",
+      "ventas": 29
+    },
+    {
+      "periodo": "2026-02-10",
+      "hora": "10:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-02-11",
+      "hora": "14:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-02-12",
+      "hora": "11:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-02-13",
+      "hora": "16:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-02-14",
+      "hora": "14:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-02-15",
+      "hora": "9:00",
+      "ventas": 32
+    },
+    {
+      "periodo": "2026-02-16",
+      "hora": "14:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-02-17",
+      "hora": "16:00",
+      "ventas": 31
+    },
+    {
+      "periodo": "2026-02-18",
+      "hora": "12:00",
+      "ventas": 24
+    },
+    {
+      "periodo": "2026-02-19",
+      "hora": "16:00",
+      "ventas": 23
+    },
+    {
+      "periodo": "2026-02-20",
+      "hora": "20:00",
+      "ventas": 30
+    },
+    {
+      "periodo": "2026-02-21",
+      "hora": "17:00",
+      "ventas": 22
+    },
+    {
+      "periodo": "2026-02-22",
+      "hora": "19:00",
+      "ventas": 21
+    },
+    {
+      "periodo": "2026-02-23",
+      "hora": "13:00",
+      "ventas": 23
+    },
+    {
+      "periodo": "2026-02-24",
+      "hora": "18:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-02-25",
+      "hora": "15:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-02-26",
+      "hora": "18:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-02-27",
+      "hora": "14:00",
+      "ventas": 22
+    },
+    {
+      "periodo": "2026-02-28",
+      "hora": "14:00",
+      "ventas": 24
+    },
+    {
+      "periodo": "2026-03-01",
+      "hora": "18:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-03-02",
+      "hora": "20:00",
+      "ventas": 24
+    },
+    {
+      "periodo": "2026-03-03",
+      "hora": "17:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-03-04",
+      "hora": "13:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-03-05",
+      "hora": "20:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-03-06",
+      "hora": "16:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-03-07",
+      "hora": "16:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-03-08",
+      "hora": "18:00",
+      "ventas": 23
+    },
+    {
+      "periodo": "2026-03-09",
+      "hora": "15:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-03-10",
+      "hora": "13:00",
+      "ventas": 30
+    },
+    {
+      "periodo": "2026-03-11",
+      "hora": "19:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-03-12",
+      "hora": "16:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-03-13",
+      "hora": "13:00",
+      "ventas": 30
+    },
+    {
+      "periodo": "2026-03-14",
+      "hora": "20:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-03-15",
+      "hora": "13:00",
+      "ventas": 30
+    },
+    {
+      "periodo": "2026-03-16",
+      "hora": "11:00",
+      "ventas": 29
+    },
+    {
+      "periodo": "2026-03-17",
+      "hora": "15:00",
+      "ventas": 24
+    },
+    {
+      "periodo": "2026-03-18",
+      "hora": "11:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-03-19",
+      "hora": "12:00",
+      "ventas": 24
+    },
+    {
+      "periodo": "2026-03-20",
+      "hora": "19:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-03-21",
+      "hora": "14:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-03-22",
+      "hora": "14:00",
+      "ventas": 24
+    },
+    {
+      "periodo": "2026-03-23",
+      "hora": "20:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-03-24",
+      "hora": "19:00",
+      "ventas": 25
+    },
+    {
+      "periodo": "2026-03-25",
+      "hora": "13:00",
+      "ventas": 29
+    },
+    {
+      "periodo": "2026-03-26",
+      "hora": "9:00",
+      "ventas": 27
+    },
+    {
+      "periodo": "2026-03-27",
+      "hora": "16:00",
+      "ventas": 26
+    },
+    {
+      "periodo": "2026-03-28",
+      "hora": "10:00",
+      "ventas": 29
+    },
+    {
+      "periodo": "2026-03-29",
+      "hora": "16:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-03-30",
+      "hora": "9:00",
+      "ventas": 28
+    },
+    {
+      "periodo": "2026-03-31",
+      "hora": "12:00",
+      "ventas": 29
+    }
+  ],
+  "semana": [
+    {
+      "periodo": "2026-S01",
+      "hora": "19:00",
+      "ventas": 94
+    },
+    {
+      "periodo": "2026-S02",
+      "hora": "9:00",
+      "ventas": 143
+    },
+    {
+      "periodo": "2026-S03",
+      "hora": "15:00",
+      "ventas": 140
+    },
+    {
+      "periodo": "2026-S04",
+      "hora": "11:00",
+      "ventas": 151
+    },
+    {
+      "periodo": "2026-S05",
+      "hora": "19:00",
+      "ventas": 141
+    },
+    {
+      "periodo": "2026-S06",
+      "hora": "9:00",
+      "ventas": 135
+    },
+    {
+      "periodo": "2026-S07",
+      "hora": "12:00",
+      "ventas": 147
+    },
+    {
+      "periodo": "2026-S08",
+      "hora": "16:00",
+      "ventas": 153
+    },
+    {
+      "periodo": "2026-S09",
+      "hora": "18:00",
+      "ventas": 156
+    },
+    {
+      "periodo": "2026-S10",
+      "hora": "19:00",
+      "ventas": 148
+    },
+    {
+      "periodo": "2026-S11",
+      "hora": "13:00",
+      "ventas": 149
+    },
+    {
+      "periodo": "2026-S12",
+      "hora": "11:00",
+      "ventas": 147
+    },
+    {
+      "periodo": "2026-S13",
+      "hora": "17:00",
+      "ventas": 146
+    },
+    {
+      "periodo": "2026-S14",
+      "hora": "20:00",
+      "ventas": 45
+    }
+  ],
+  "mes": [
+    {
+      "periodo": "2026-01",
+      "hora": "9:00",
+      "ventas": 603
+    },
+    {
+      "periodo": "2026-02",
+      "hora": "16:00",
+      "ventas": 537
+    },
+    {
+      "periodo": "2026-03",
+      "hora": "16:00",
+      "ventas": 611
+    }
+  ]
+}

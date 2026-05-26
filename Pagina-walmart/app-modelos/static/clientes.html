@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Página 4 - Clientes / Picos</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body>
+
+  <header class="aurrera-topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img src="/img/aurrera-logo.svg" alt="Aurrera">
+
+        <div class="brand-text">
+          <h1>
+
+            Página 4 · Representación de clientes
+
+          </h1>
+          <p>
+
+          </p>
+        </div>
+
+      </div>
+
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/tiendas.html">Tiendas</a>
+        <a href="/despensa.html">Despensa</a>
+        <a href="/horarios.html">Horarios</a>
+        <a href="/clientes.html">Clientes</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main class="clientes-page">
+
+    <section class="hero aurrera-hero">
+
+      <h2>
+
+        <span class="material-symbols-outlined hero-icon">
+          groups
+        </span>
+
+        Representación de clientes y comportamiento
+
+      </h2>
+
+      <p>
+        Visualización y análisis de grupos de clientes mediante patrones de compra, horarios de concurrencia y
+        comportamiento comercial.
+      </p>
+
+    </section>
+
+    <section class="clientes-analytics-grid">
+
+      <!-- KPIs -->
+
+      <section class="clientes-panel">
+
+        <h2>Indicadores generales</h2>
+
+        <div class="clientes-kpi-grid">
+
+          <div class="clientes-kpi">
+            <span>Total de grupos</span>
+            <strong id="kpiSegmentos">-</strong>
+          </div>
+
+          <div class="clientes-kpi">
+            <span>Grupo principal</span>
+            <strong id="kpiSegmentoTop">-</strong>
+          </div>
+
+          <div class="clientes-kpi">
+            <span>Horario con más clientes</span>
+            <strong id="kpiHoraTop">-</strong>
+          </div>
+
+          <div class="clientes-kpi">
+            <span>Método de pago más usado</span>
+            <strong id="kpiPagoTop">-</strong>
+          </div>
+
+          <div class="clientes-kpi">
+            <span>Compras totales</span>
+            <strong id="kpiVentas">-</strong>
+          </div>
+
+          <div class="clientes-kpi">
+            <span>Compra promedio</span>
+            <strong id="kpiPromedio">-</strong>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- FILTROS -->
+
+      <section class="clientes-panel">
+
+        <h2>Filtros</h2>
+
+        <div class="clientes-filters">
+
+          <div>
+            <label>Vista</label>
+
+            <select id="filtroModo" onchange="cargarClientes()">
+              <option value="general">General</option>
+              <option value="sucursales">Sucursales</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Período</label>
+
+            <select id="filtroPeriodo" onchange="cargarClientes()">
+              <option value="general">General - 3 meses</option>
+              <option value="2026-01">Enero 2026</option>
+              <option value="2026-02">Febrero 2026</option>
+              <option value="2026-03">Marzo 2026</option>
+            </select>
+          </div>
+
+          <div id="contenedorFiltroSucursal">
+
+            <label>Sucursal</label>
+
+            <select id="filtroSucursal" onchange="aplicarFiltros()">
+              <option value="todos">Todas</option>
+            </select>
+
+          </div>
+
+          <div>
+
+            <label>Ordenar por</label>
+
+            <select id="ordenarPor" onchange="aplicarFiltros()">
+
+              <option value="clientes_desc">
+                Más clientes
+              </option>
+
+              <option value="ventas_desc">
+                Más compras
+              </option>
+
+              <option value="promedio_desc">
+                Mayor consumo promedio
+              </option>
+
+              <option value="clientes_asc">
+                Menos clientes
+              </option>
+
+              <option value="segmento">
+                Grupo A-Z
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- RESUMEN -->
+
+      <section class="clientes-panel">
+
+        <h2>Interpretación de resultados</h2>
+
+        <div id="resumen" class="clientes-summary">
+
+          Aún no hay datos cargados.
+
+        </div>
+
+      </section>
+
+      <!-- SEGMENTOS -->
+
+      <section class="clientes-panel">
+
+        <h2>Grupos de comportamiento detectados</h2>
+
+        <div id="resultado" class="clientes-segments-grid">
+
+          <p class="clientes-empty">
+            Aún no hay segmentos disponibles.
+          </p>
+
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  <script>
+    let segmentosOriginales = [];
+    let segmentosFiltrados = [];
+
+    async function cargarClientes() {
+      try {
+        const periodo = document.getElementById('filtroPeriodo')?.value || 'general';
+        const modo = document.getElementById('filtroModo')?.value || 'general';
+
+        const res = await fetch(`/api/clientes-pico?periodo=${encodeURIComponent(periodo)}&modo=${encodeURIComponent(modo)}`);
+        const data = await res.json();
+
+        if (!data.segmentos || data.segmentos.length === 0) {
+          document.getElementById('resultado').innerHTML =
+            '<p class="clientes-empty">No hay grupos disponibles para este período.</p>';
+          return;
+        }
+
+        segmentosOriginales = data.segmentos;
+
+        const contSucursal = document.getElementById('contenedorFiltroSucursal');
+
+        if (modo === 'general') {
+          contSucursal.style.display = 'none';
+        } else {
+          contSucursal.style.display = 'block';
+          await cargarSucursalesFiltro();
+        }
+
+        aplicarFiltros();
+
+      } catch (error) {
+        document.getElementById('resultado').innerHTML =
+          '<p class="clientes-empty">Error consultando grupos.</p>';
+      }
+    }
+
+    function cargarFiltros(segmentos) {
+      // Ya no usamos filtros por género ni tipo.
+      // Solo se mantiene sucursal y ordenar por.
+    }
+
+    async function cargarSucursalesFiltro() {
+      const select = document.getElementById('filtroSucursal');
+      select.innerHTML = '<option value="todos">Todas</option>';
+
+      try {
+        const res = await fetch('/api/sucursales-csv');
+        const data = await res.json();
+
+        if (!data.ok || !data.sucursales) return;
+
+        data.sucursales.forEach(s => {
+          select.innerHTML += `<option value="${s}">${s}</option>`;
+        });
+
+      } catch (error) {
+        console.error('Error cargando sucursales:', error);
+      }
+    }
+
+    function llenarSelect(id, opciones, textoTodos) {
+      const select = document.getElementById(id);
+      select.innerHTML = `<option value="todos">${textoTodos}</option>`;
+
+      opciones.forEach(op => {
+        select.innerHTML += `<option value="${op}">${op}</option>`;
+      });
+    }
+
+    function aplicarFiltros() {
+      const modo = document.getElementById('filtroModo')?.value || 'general';
+      const sucursal = document.getElementById('filtroSucursal')?.value || 'todos';
+      const orden = document.getElementById('ordenarPor').value;
+
+      segmentosFiltrados = segmentosOriginales.filter(s => {
+        if (modo === 'general') {
+          return true;
+        }
+
+        const okSucursal =
+          sucursal === 'todos' ||
+          String(s.city || '').trim().toLowerCase() === String(sucursal).trim().toLowerCase();
+
+        return okSucursal;
+      });
+
+      if (orden === 'clientes_desc') {
+        segmentosFiltrados.sort((a, b) => b.tickets - a.tickets);
+      }
+
+      if (orden === 'clientes_asc') {
+        segmentosFiltrados.sort((a, b) => a.tickets - b.tickets);
+      }
+
+      if (orden === 'ventas_desc') {
+        segmentosFiltrados.sort((a, b) => (b.total_ventas || 0) - (a.total_ventas || 0));
+      }
+
+      if (orden === 'promedio_desc') {
+        segmentosFiltrados.sort((a, b) => (b.gasto_promedio || 0) - (a.gasto_promedio || 0));
+      }
+
+      if (orden === 'segmento') {
+        segmentosFiltrados.sort((a, b) => a.segmento.localeCompare(b.segmento));
+      }
+
+      renderKPIs(segmentosFiltrados);
+      renderResumen(segmentosFiltrados);
+      renderSegmentos(segmentosFiltrados);
+    }
+
+    function renderKPIs(segmentos) {
+      if (!segmentos || segmentos.length === 0) {
+        document.getElementById('kpiSegmentos').textContent = '-';
+        document.getElementById('kpiSegmentoTop').textContent = '-';
+        document.getElementById('kpiHoraTop').textContent = '-';
+        document.getElementById('kpiPagoTop').textContent = '-';
+        document.getElementById('kpiVentas').textContent = '-';
+        document.getElementById('kpiPromedio').textContent = '-';
+        return;
+      }
+
+      const top = [...segmentos].sort((a, b) => b.tickets - a.tickets)[0];
+
+      const ventasTotales = segmentos.reduce((acc, s) => acc + (s.total_ventas || 0), 0);
+      const ticketsTotales = segmentos.reduce((acc, s) => acc + (s.tickets || 0), 0);
+
+      const promedioGlobal = ticketsTotales > 0
+        ? ventasTotales / ticketsTotales
+        : 0;
+
+      document.getElementById('kpiSegmentos').textContent = segmentos.length;
+      document.getElementById('kpiSegmentoTop').textContent = top.segmento;
+      document.getElementById('kpiHoraTop').textContent = horaDominante(segmentos);
+      document.getElementById('kpiPagoTop').textContent = pagoDominante(segmentos);
+      document.getElementById('kpiVentas').textContent = `$${ventasTotales.toFixed(2)}`;
+      document.getElementById('kpiPromedio').textContent = `$${promedioGlobal.toFixed(2)}`;
+    }
+
+    function renderResumen(segmentos) {
+      const periodo = document.getElementById('filtroPeriodo')?.value || 'general';
+      const textoPeriodo = periodo === 'general' ? 'los 3 meses' : periodo;
+      const cont = document.getElementById('resumen');
+
+      if (!segmentos || segmentos.length === 0) {
+        cont.innerHTML = 'No hay datos para interpretar con los filtros seleccionados.';
+        return;
+      }
+
+      const top = [...segmentos].sort((a, b) => b.tickets - a.tickets)[0];
+
+      const ventasTotales = segmentos.reduce((acc, s) => acc + (s.total_ventas || 0), 0);
+      const ticketsTotales = segmentos.reduce((acc, s) => acc + (s.tickets || 0), 0);
+
+      const promedioGlobal = ticketsTotales > 0
+        ? ventasTotales / ticketsTotales
+        : 0;
+
+      const producto = productoDominante(segmentos);
+      const hora = horaDominante(segmentos);
+      const pago = pagoDominante(segmentos);
+
+      cont.innerHTML = `
+  <strong>Resumen de clientes filtrados - ${textoPeriodo}</strong><br><br>
+
+  Se encontraron <strong>${segmentos.length}</strong> grupo(s) de clientes.
+  En conjunto, estos grupos representan <strong>${ticketsTotales}</strong>
+  clientes atendidos y <strong>$${ventasTotales.toFixed(2)}</strong>
+  en compras acumuladas.<br><br>
+
+  El grupo con mayor actividad fue <strong>${top.segmento}</strong>,
+  con <strong>${top.tickets}</strong> clientes atendidos.<br><br>
+
+  El horario donde más se concentran los clientes fue <strong>${hora}</strong>.
+  El producto más comprado fue <strong>${producto}</strong>,
+  y el método de pago más frecuente fue <strong>${pago}</strong>.<br><br>
+
+  En promedio, cada cliente realizó compras por
+  <strong>$${promedioGlobal.toFixed(2)}</strong>.
+`;
+
+    }
+
+    function renderSegmentos(segmentos) {
+      const cont = document.getElementById('resultado');
+      cont.innerHTML = '';
+
+      if (!segmentos || segmentos.length === 0) {
+        cont.innerHTML = '<p class="clientes-empty">No hay segmentos.</p>';
+        return;
+      }
+
+      segmentos.forEach((s, index) => {
+        const productosPico = (s.productos_pico || [])
+          .map(p => `<span class="clientes-mini-product">${p}</span>`)
+          .join('');
+
+        cont.innerHTML += `
+        <div class="clientes-segment-card">
+
+          <div class="clientes-segment-top">
+            <h3>${index + 1}. ${s.segmento}</h3>
+            <div class="clientes-traffic-badge">${obtenerNivelSegmento(s.tickets)}</div>
+          </div>
+
+          <div class="clientes-badge-row">
+            <span class="clientes-badge clientes-gender">${s.genero || '-'}</span>
+            <span class="clientes-badge clientes-type">${s.tipo_cliente || '-'}</span>
+            ${mostrarSucursalEnTarjeta(s)}
+          </div>
+
+          <div class="clientes-metric-grid">
+            <div class="clientes-metric">
+              <span>Clientes atendidos</span>
+              <strong>${s.tickets}</strong>
+            </div>
+
+            <div class="clientes-metric">
+              <span>Horario con más clientes</span>
+              <strong>${s.hora_critica || s.hora_pico || '-'}</strong>
+            </div>
+
+            <div class="clientes-metric">
+              <span>Compras totales</span>
+              <strong>$${Number(s.total_ventas || 0).toFixed(2)}</strong>
+            </div>
+
+            <div class="clientes-metric">
+              <span>Gasto promedio</span>
+              <strong>$${Number(s.gasto_promedio || 0).toFixed(2)}</strong>
+            </div>
+
+            <div class="clientes-metric">
+              <span>Método pago</span>
+              <strong>${s.metodo_pago_top || '-'}</strong>
+            </div>
+
+            <div class="clientes-metric">
+              <span>Producto top</span>
+              <strong>${s.producto_top || '-'}</strong>
+            </div>
+          </div>
+
+          <div class="clientes-products-pico">
+            <strong>Productos más comprados:</strong>
+            <div class="clientes-products-list">
+              ${productosPico || '<span class="empty">Sin productos</span>'}
+            </div>
+          </div>
+
+        </div>
+      `;
+      });
+    }
+
+    function obtenerNivelSegmento(clientes) {
+      if (clientes >= 2000) {
+        return `
+    <span class="material-symbols-outlined">
+      trending_up
+    </span>
+    Alta concurrencia
+  `;
+      }
+      if (clientes >= 1000) {
+        return `
+    <span class="material-symbols-outlined">
+      equalizer
+    </span>
+    Concurrencia media
+  `;
+      }
+      return `
+  <span class="material-symbols-outlined">
+    trending_down
+  </span>
+  Baja concurrencia
+`;
+    }
+
+    function horaDominante(segmentos) {
+      const conteo = {};
+      segmentos.forEach(s => {
+        const h = s.hora_critica || s.hora_pico;
+        if (!h) return;
+        conteo[h] = (conteo[h] || 0) + 1;
+      });
+      return maxClave(conteo);
+    }
+
+    function pagoDominante(segmentos) {
+      const conteo = {};
+      segmentos.forEach(s => {
+        if (!s.metodo_pago_top) return;
+        conteo[s.metodo_pago_top] = (conteo[s.metodo_pago_top] || 0) + 1;
+      });
+      return maxClave(conteo);
+    }
+
+    function productoDominante(segmentos) {
+      const conteo = {};
+      segmentos.forEach(s => {
+        if (!s.producto_top) return;
+        conteo[s.producto_top] = (conteo[s.producto_top] || 0) + 1;
+      });
+      return maxClave(conteo);
+    }
+
+    function maxClave(obj) {
+      let mejor = '-';
+      let mayor = 0;
+
+      Object.keys(obj).forEach(k => {
+        if (obj[k] > mayor) {
+          mayor = obj[k];
+          mejor = k;
+        }
+      });
+
+      return mejor;
+    }
+
+    function mostrarSucursalEnTarjeta(s) {
+      const modo = document.getElementById('filtroModo')?.value || 'general';
+      const sucursal = document.getElementById('filtroSucursal')?.value || 'todos';
+
+      if (modo === 'general') {
+        return '';
+      }
+
+      if (sucursal === 'todos') {
+        return '';
+      }
+
+      return `<span class="clientes-badge clientes-city">${s.city || '-'}</span>`;
+    }
+
+    cargarClientes();
+  </script>
+
+  <div class="info-box">
+<span class="material-symbols-outlined title-icon">
+  description
+</span>
+
+Descripción, naturaleza y volumen de los datos
+
+    <p>
+      Este módulo utiliza información histórica proveniente del archivo
+      <strong>dataset_walmart.csv</strong>, el cual contiene registros comerciales
+      asociados a clientes, productos, horarios y métodos de pago.
+    </p>
+
+    <p>
+      Para el análisis de comportamiento de clientes se seleccionaron variables
+      relacionadas con características de compra y segmentación comercial, debido
+      a que permiten identificar patrones de consumo y tendencias de comportamiento
+      dentro de las sucursales.
+    </p>
+
+    <p>
+      Las variables utilizadas fueron:
+    </p>
+
+    <ul>
+      <li><strong>Gender:</strong> utilizado para segmentar comportamiento por género.</li>
+      <li><strong>Customer Type:</strong> permite clasificar clientes por tipo de consumo.</li>
+      <li><strong>Invoice ID:</strong> empleado para contabilizar clientes únicos y compras realizadas.</li>
+      <li><strong>Hora:</strong> utilizada para identificar horarios críticos y picos de concurrencia.</li>
+      <li><strong>Producto:</strong> permite detectar artículos más comprados por cada segmento.</li>
+      <li><strong>Método de pago:</strong> utilizado para identificar preferencias de compra.</li>
+      <li><strong>Sucursal:</strong> permite comparar comportamiento entre distintos puntos de venta.</li>
+    </ul>
+
+    <p>
+      Los datos son de naturaleza <strong>estructurada, descriptiva y comercial</strong>,
+      ya que representan hábitos de consumo y comportamiento de clientes dentro
+      del dominio empresarial. El sistema procesa aproximadamente
+      <strong>79,875 registros históricos</strong> y cerca de
+      <strong>18,294 clientes únicos</strong> para construir grupos de comportamiento,
+      detectar horarios críticos y analizar patrones de compra.
+    </p>
+  </div>
+  <footer class="footer-aurrera">
+    Proyecto de Ingeniería del Conocimiento · ITSOEH · 2026
+  </footer>
+
+</body>
+
+</html>

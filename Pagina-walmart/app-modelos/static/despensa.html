@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página 2 - Despensa Inteligente</title>
+  <link rel="stylesheet" href="/css/theme.css">
+  
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  />
+</head>
+
+<body>
+
+<header class="aurrera-topbar">
+
+  <div class="topbar-inner">
+
+    <div class="brand">
+
+      <img
+        src="/img/aurrera-logo.svg"
+        alt="Aurrera"
+      >
+
+      <div class="brand-text">
+<h1>Página 2 · Planeación inteligente del hogar</h1>
+<p>Modelo predictivo de consumo y abastecimiento doméstico</p>
+      </div>
+
+    </div>
+
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/tiendas.html">Tiendas</a>
+      <a href="/despensa.html">Despensa</a>
+      <a href="/horarios.html">Horarios</a>
+      <a href="/clientes.html">Clientes</a>
+    </nav>
+
+  </div>
+</div>
+</header>
+
+<main class="page">
+
+<section class="hero aurrera-hero">
+
+  <h2>
+
+  <span class="material-symbols-outlined hero-icon">
+    psychology
+  </span>
+
+  Planeación inteligente de consumo
+
+</h2>
+
+  <p>
+    Estimación de productos para despensa, hogar y consumo personal utilizando patrones históricos y segmentación de necesidades.
+  </p>
+
+</section>
+
+<section class="grid">
+
+  <section class="card">
+    <h2>Datos del hogar</h2>
+
+<div class="alerta">
+  Completa la información del hogar para generar recomendaciones inteligentes basadas en patrones de consumo similares.
+</div>
+    
+
+    <label>Número de personas</label>
+    <input type="number" id="personas" min="1" value="4">
+
+    <label>Metros cuadrados del hogar</label>
+    <input type="number" id="m2" min="1" value="90">
+
+    <label>Genero(s)</label>
+    <select id="genero">
+      <option value="Masculino(s)">Masculino(s)</option>
+      <option value="Femenino(s)">Femenino(s)</option>
+      <option value="M-F" selected>Ambos</option>
+    </select>
+
+    <button onclick="recomendarDespensa()">Generar recomendaciones</button>
+  </section>
+
+  <section class="card">
+    <h2>Recomendaciones generadas</h2>
+
+    <div id="entrada" class="empty">
+      Aún no se ha consultado el modelo.
+    </div>
+
+    <br>
+
+    <div class="grid-resultados">
+      <div class="grupo">
+<h3>
+
+  <span class="material-symbols-outlined grupo-icon">
+    shopping_basket
+  </span>
+
+  Despensa
+
+</h3>
+        <div id="despensa"></div>
+      </div>
+
+      <div class="grupo">
+<h3>
+
+  <span class="material-symbols-outlined grupo-icon">
+    cleaning_services
+  </span>
+
+  Aseo hogar
+
+</h3>
+        <div id="hogar"></div>
+      </div>
+
+      <div class="grupo">
+<h3>
+
+  <span class="material-symbols-outlined grupo-icon">
+    health_and_beauty
+  </span>
+
+  Cuidado personal
+
+</h3>
+        <div id="personal"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  async function entrenarKNN() {
+    const estado = document.getElementById('estado');
+    estado.textContent = 'Entrenando modelo...';
+
+    try {
+      const res = await fetch('/api/entrenar-despensa');
+      const data = await res.json();
+
+      estado.textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+      estado.textContent = 'Error entrenando el modelo';
+    }
+  }
+
+  async function recomendarDespensa() {
+    const personas = document.getElementById('personas').value;
+    const m2 = document.getElementById('m2').value;
+    const genero = document.getElementById('genero').value;
+
+    const url = `/api/recomendar-despensa?personas=${personas}&m2=${m2}&genero=${encodeURIComponent(genero)}`;
+
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+
+      document.getElementById('entrada').innerHTML = `
+        <strong>Entrada:</strong>
+        ${data.entrada.personas} persona(s),
+        ${data.entrada.m2} m² del hogar,
+        genero: ${data.entrada.genero}
+      `;
+
+      renderLista('despensa', data.recomendaciones.despensa);
+      renderLista('hogar', data.recomendaciones.hogar);
+      renderLista('personal', data.recomendaciones.personal);
+
+    } catch (error) {
+      alert('Error consultando recomendaciones');
+    }
+  }
+
+  function renderLista(id, lista) {
+    const cont = document.getElementById(id);
+    cont.innerHTML = '';
+
+    if (!lista || lista.length === 0) {
+      cont.innerHTML = '<p class="empty">Sin recomendaciones</p>';
+      return;
+    }
+
+    lista.forEach(producto => {
+      cont.innerHTML += `<div class="item">${producto}</div>`;
+    });
+  }
+</script>
+
+<div class="info-box">
+<h2>
+  <span class="material-symbols-outlined title-icon">
+    description
+  </span>
+   Fuente, naturaleza y criterios de selección de los datos</h2>
+
+  <p>
+    Este módulo utiliza información derivada del archivo
+    <strong>dataset_walmart.csv</strong>, el cual contiene registros históricos
+    de compras realizadas por clientes en diferentes sucursales comerciales.
+  </p>
+
+  <p>
+    Para el desarrollo del modelo se seleccionaron variables relacionadas con
+    las características del hogar y hábitos de consumo, debido a que estos
+    factores influyen directamente en la cantidad y tipo de productos adquiridos.
+  </p>
+
+  <p>
+    Las variables utilizadas fueron:
+  </p>
+
+  <ul>
+    <li><strong>Número de personas:</strong> permite estimar el volumen de consumo familiar.</li>
+    <li><strong>Tamaño del hogar (m²):</strong> se relaciona con necesidades de limpieza y abastecimiento.</li>
+    <li><strong>Tipo de genero (H, M, H-M):</strong> representa patrones generales de consumo asociados al hogar.</li>
+  </ul>
+
+  <p>
+    Los datos son de naturaleza <strong>estructurada y descriptiva</strong>, ya que representan
+    patrones de compra y comportamiento comercial. A partir de aproximadamente
+    <strong>79,875 registros históricos</strong>, el sistema aplica un modelo
+    basado en <strong>K-Nearest Neighbors (KNN)</strong> para identificar perfiles
+    similares y generar recomendaciones inteligentes de productos para despensa y hogar.
+  </p>
+</div>
+<footer class="footer-aurrera">
+  Proyecto de Ingeniería del Conocimiento · ITSOEH · 2026
+</footer>
+</body>
+
+</html>

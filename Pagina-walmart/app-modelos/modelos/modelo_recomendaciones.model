@@ -1,0 +1,2240 @@
+{
+  "productos": [
+    "agua embotellada",
+    "arroz",
+    "cerveza",
+    "detergente",
+    "frijol",
+    "galletas",
+    "huevo",
+    "jugo",
+    "leche",
+    "pan blanco",
+    "pan dulce",
+    "papel higiénico",
+    "queso",
+    "refresco",
+    "sabritas",
+    "tortillas",
+    "yogurt"
+  ],
+  "reglas": [
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0168,
+      "confianza": 0.2490733876945886
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.01685,
+      "confianza": 0.24580598103574033
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.01645,
+      "confianza": 0.24388435878428466
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.0166,
+      "confianza": 0.24215900802334064
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0166,
+      "confianza": 0.24215900802334064
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "huevo"
+      ],
+      "soporte": 0.01625,
+      "confianza": 0.24091919940696815
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "pan blanco"
+      ],
+      "soporte": 0.01625,
+      "confianza": 0.23705324580598106
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.0162,
+      "confianza": 0.23632385120350108
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.0594,
+      "confianza": 0.23501483679525226
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.016,
+      "confianza": 0.23340627279358134
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.01565,
+      "confianza": 0.23202372127501855
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0156,
+      "confianza": 0.2312824314306894
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.01555,
+      "confianza": 0.23054114158636027
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.0158,
+      "confianza": 0.2304886943836616
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.0601,
+      "confianza": 0.23022409500095767
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.05815,
+      "confianza": 0.23006923837784374
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.06,
+      "confianza": 0.22984102662325223
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.0579,
+      "confianza": 0.22908011869436204
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.05875,
+      "confianza": 0.22882181110029212
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05865,
+      "confianza": 0.22869955156950672
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.0439,
+      "confianza": 0.22852680895366997
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.0154,
+      "confianza": 0.22831727205337288
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.01535,
+      "confianza": 0.22757598220904376
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.06,
+      "confianza": 0.22753128555176336
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.05875,
+      "confianza": 0.22740468356880197
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0583,
+      "confianza": 0.22733476311171766
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05955,
+      "confianza": 0.2269435975609756
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.01555,
+      "confianza": 0.22684172137126185
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.0601,
+      "confianza": 0.22666415236658496
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0572,
+      "confianza": 0.2263105835806133
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.0155,
+      "confianza": 0.2261123267687819
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.01525,
+      "confianza": 0.22609340252038548
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.01525,
+      "confianza": 0.22609340252038548
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.02845,
+      "confianza": 0.22588328701865817
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.05835,
+      "confianza": 0.22585639636152505
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.04335,
+      "confianza": 0.2256637168141593
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0582,
+      "confianza": 0.2252757886587962
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.05935,
+      "confianza": 0.22506636329161928
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.04325,
+      "confianza": 0.22490899635985437
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.05785,
+      "confianza": 0.22474747474747472
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.01515,
+      "confianza": 0.22461082283172723
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05955,
+      "confianza": 0.2245898547991703
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05775,
+      "confianza": 0.22435897435897437
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.05955,
+      "confianza": 0.22429378531073443
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.05955,
+      "confianza": 0.22429378531073443
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.05885,
+      "confianza": 0.2242759146341463
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.0594,
+      "confianza": 0.22402413728078446
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05845,
+      "confianza": 0.22390346676881823
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.0584,
+      "confianza": 0.2238405519356075
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.05935,
+      "confianza": 0.22383556477465585
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.0126,
+      "confianza": 0.2236024844720497
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.0583,
+      "confianza": 0.2234572633192794
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.04295,
+      "confianza": 0.2233489339573583
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0582,
+      "confianza": 0.22307397470295132
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0572,
+      "confianza": 0.2227848101265823
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.05815,
+      "confianza": 0.22275426163570197
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0584,
+      "confianza": 0.22256097560975607
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.0571,
+      "confianza": 0.22239532619279456
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.05835,
+      "confianza": 0.22237042682926828
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0572,
+      "confianza": 0.2222222222222222
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.05885,
+      "confianza": 0.2219498397133698
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.0125,
+      "confianza": 0.2218278615794144
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.05785,
+      "confianza": 0.22173246454580298
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.05685,
+      "confianza": 0.22168063950087735
+    },
+    {
+      "antecedente": [
+        "pan blanco"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.01495,
+      "confianza": 0.2216456634544107
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05725,
+      "confianza": 0.22159860654151345
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.0279,
+      "confianza": 0.22151647479158396
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.05595,
+      "confianza": 0.22136498516320477
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.05865,
+      "confianza": 0.22090395480225988
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.05665,
+      "confianza": 0.22090076038214077
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.0567,
+      "confianza": 0.22083739045764364
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.05705,
+      "confianza": 0.22082446293787494
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.0582,
+      "confianza": 0.2207053469852105
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0582,
+      "confianza": 0.2207053469852105
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.05665,
+      "confianza": 0.22064264849074977
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.05655,
+      "confianza": 0.22051082082277249
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05655,
+      "confianza": 0.22025316455696206
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.05845,
+      "confianza": 0.22015065913370999
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0556,
+      "confianza": 0.21998021760633038
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.05645,
+      "confianza": 0.21930846930846928
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.0572,
+      "confianza": 0.21924108853967036
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.0562,
+      "confianza": 0.21914603236498342
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0276,
+      "confianza": 0.21913457721317983
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.05655,
+      "confianza": 0.21888910392877878
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.02755,
+      "confianza": 0.2187375942834458
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.04205,
+      "confianza": 0.21866874674986997
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.05705,
+      "confianza": 0.2186661556151782
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.042,
+      "confianza": 0.21863612701717858
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.05785,
+      "confianza": 0.21817838959079766
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.05785,
+      "confianza": 0.21817838959079766
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.05725,
+      "confianza": 0.21817835365853658
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.0579,
+      "confianza": 0.21807909604519773
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.0571,
+      "confianza": 0.21760670731707316
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.0558,
+      "confianza": 0.21758627412751025
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.0568,
+      "confianza": 0.2175828385366788
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.05775,
+      "confianza": 0.2175141242937853
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.05725,
+      "confianza": 0.21710276829730757
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.0572,
+      "confianza": 0.2169131588926811
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.0572,
+      "confianza": 0.2169131588926811
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05655,
+      "confianza": 0.21674971253353775
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.05715,
+      "confianza": 0.2167235494880546
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.0568,
+      "confianza": 0.21646341463414634
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.0547,
+      "confianza": 0.21641938674579625
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.05555,
+      "confianza": 0.21635832521908474
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.05545,
+      "confianza": 0.2162214856697212
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.05725,
+      "confianza": 0.21563088512241055
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.05685,
+      "confianza": 0.2155858930602958
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.0414,
+      "confianza": 0.215512753774076
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.05655,
+      "confianza": 0.21551067073170732
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.05545,
+      "confianza": 0.2154234654234654
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.05715,
+      "confianza": 0.21525423728813559
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.05645,
+      "confianza": 0.2151295731707317
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0413,
+      "confianza": 0.21499219156689228
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.04125,
+      "confianza": 0.21450858034321374
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.0412,
+      "confianza": 0.21447162935970848
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.0147,
+      "confianza": 0.21444201312910283
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.0559,
+      "confianza": 0.2142583365274051
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.0412,
+      "confianza": 0.21424856994279773
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0412,
+      "confianza": 0.21424856994279773
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.05415,
+      "confianza": 0.2142433234421365
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.0559,
+      "confianza": 0.21413522313733
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.05495,
+      "confianza": 0.21402142161635834
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.0567,
+      "confianza": 0.2138412219498397
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.0558,
+      "confianza": 0.21375215475962459
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.055,
+      "confianza": 0.21367521367521367
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.054,
+      "confianza": 0.2136498516320475
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.0548,
+      "confianza": 0.21343719571567676
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.05655,
+      "confianza": 0.2132755044314539
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.05595,
+      "confianza": 0.21322408536585363
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.02685,
+      "confianza": 0.2131798332671695
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.05655,
+      "confianza": 0.21299435028248587
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.05655,
+      "confianza": 0.21299435028248587
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.05555,
+      "confianza": 0.2129168263702568
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.0409,
+      "confianza": 0.21290994273815722
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.0548,
+      "confianza": 0.2128982128982129
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.0547,
+      "confianza": 0.21250971250971248
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.0408,
+      "confianza": 0.21238938053097348
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.0562,
+      "confianza": 0.21195549688855364
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.02665,
+      "confianza": 0.2115919015482334
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.05435,
+      "confianza": 0.21114996114996115
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.0556,
+      "confianza": 0.21084565794463406
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.055,
+      "confianza": 0.21068760773798123
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.04045,
+      "confianza": 0.2105674128058303
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.05495,
+      "confianza": 0.2104960735491285
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.0265,
+      "confianza": 0.21040095275903134
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.05435,
+      "confianza": 0.21037352428875555
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.054,
+      "confianza": 0.2103213242453749
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.0539,
+      "confianza": 0.21017742249951257
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.02645,
+      "confianza": 0.21000396982929734
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.05405,
+      "confianza": 0.20998445998445997
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.05415,
+      "confianza": 0.20959938068511705
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.0403,
+      "confianza": 0.20956838273530942
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.0539,
+      "confianza": 0.20863170118056898
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.04005,
+      "confianza": 0.20826833073322934
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.03995,
+      "confianza": 0.20796460176991152
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.05255,
+      "confianza": 0.20791295746785363
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0398,
+      "confianza": 0.2071837584591359
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.05405,
+      "confianza": 0.20716749712533536
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.02595,
+      "confianza": 0.20603414053195712
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0396,
+      "confianza": 0.2059282371294852
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.0532,
+      "confianza": 0.2059221985678343
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.0116,
+      "confianza": 0.20585625554569653
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.01155,
+      "confianza": 0.20496894409937888
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.05255,
+      "confianza": 0.20491323844804055
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "leche"
+      ],
+      "soporte": 0.0394,
+      "confianza": 0.2048881955278211
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.0115,
+      "confianza": 0.20408163265306123
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.0532,
+      "confianza": 0.20379237693928365
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.01395,
+      "confianza": 0.20350109409190373
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.01145,
+      "confianza": 0.20319432120674358
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.03895,
+      "confianza": 0.2027589796980739
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "cerveza"
+      ],
+      "soporte": 0.03885,
+      "confianza": 0.20202808112324494
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.03875,
+      "confianza": 0.2015080603224129
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.01135,
+      "confianza": 0.20141969831410828
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.0253,
+      "confianza": 0.20087336244541484
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "yogurt"
+      ],
+      "soporte": 0.02505,
+      "confianza": 0.19888844779674472
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "detergente"
+      ],
+      "soporte": 0.01095,
+      "confianza": 0.19432120674356698
+    },
+    {
+      "antecedente": [
+        "huevo"
+      ],
+      "consecuente": [
+        "arroz"
+      ],
+      "soporte": 0.0133,
+      "confianza": 0.19401896425966447
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "queso"
+      ],
+      "soporte": 0.0244,
+      "confianza": 0.19372766971020247
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "papel higiénico"
+      ],
+      "soporte": 0.0109,
+      "confianza": 0.19343389529724933
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.01085,
+      "confianza": 0.19254658385093168
+    },
+    {
+      "antecedente": [
+        "agua embotellada"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.0242,
+      "confianza": 0.19213973799126635
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "sabritas"
+      ],
+      "soporte": 0.0108,
+      "confianza": 0.19165927240461403
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "refresco"
+      ],
+      "soporte": 0.0107,
+      "confianza": 0.1898846495119787
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "galletas"
+      ],
+      "soporte": 0.0104,
+      "confianza": 0.18456078083407276
+    },
+    {
+      "antecedente": [
+        "jugo"
+      ],
+      "consecuente": [
+        "frijol"
+      ],
+      "soporte": 0.00965,
+      "confianza": 0.1712511091393079
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.0439,
+      "confianza": 0.16992452099864525
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.04325,
+      "confianza": 0.168026418026418
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.04335,
+      "confianza": 0.16327683615819208
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.04295,
+      "confianza": 0.16198378276447295
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.0414,
+      "confianza": 0.16143497757847533
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.0408,
+      "confianza": 0.1589094449853944
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.0409,
+      "confianza": 0.15889665889665888
+    },
+    {
+      "antecedente": [
+        "papel higiénico"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.042,
+      "confianza": 0.15840090514802943
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.04205,
+      "confianza": 0.15838041431261768
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.0413,
+      "confianza": 0.15829819854350327
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.04125,
+      "confianza": 0.15801570580348592
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.0412,
+      "confianza": 0.15791490992717516
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.04005,
+      "confianza": 0.1561707935270033
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.0403,
+      "confianza": 0.1559899361331527
+    },
+    {
+      "antecedente": [
+        "yogurt"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.04045,
+      "confianza": 0.15495115878184257
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.03895,
+      "confianza": 0.15410484668644908
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.03875,
+      "confianza": 0.1533135509396637
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.03995,
+      "confianza": 0.15224847560975607
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.03885,
+      "confianza": 0.15131450827653362
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "tortillas"
+      ],
+      "soporte": 0.0398,
+      "confianza": 0.15092908608266972
+    },
+    {
+      "antecedente": [
+        "queso"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.0396,
+      "confianza": 0.15017064846416384
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "pan dulce"
+      ],
+      "soporte": 0.0394,
+      "confianza": 0.1501524390243902
+    },
+    {
+      "antecedente": [
+        "pan dulce"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.0279,
+      "confianza": 0.14508580343213728
+    },
+    {
+      "antecedente": [
+        "tortillas"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.0242,
+      "confianza": 0.12597605413846955
+    },
+    {
+      "antecedente": [
+        "galletas"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.02845,
+      "confianza": 0.1071563088512241
+    },
+    {
+      "antecedente": [
+        "sabritas"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.02755,
+      "confianza": 0.10703185703185703
+    },
+    {
+      "antecedente": [
+        "detergente"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.0276,
+      "confianza": 0.10578765810655423
+    },
+    {
+      "antecedente": [
+        "frijol"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.02685,
+      "confianza": 0.10469877169038798
+    },
+    {
+      "antecedente": [
+        "cerveza"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.02645,
+      "confianza": 0.10301850048685493
+    },
+    {
+      "antecedente": [
+        "refresco"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.0265,
+      "confianza": 0.10257402748209792
+    },
+    {
+      "antecedente": [
+        "leche"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.02665,
+      "confianza": 0.10156249999999999
+    },
+    {
+      "antecedente": [
+        "arroz"
+      ],
+      "consecuente": [
+        "agua embotellada"
+      ],
+      "soporte": 0.0253,
+      "confianza": 0.10009891196834818
+    }
+  ],
+  "top_productos": [
+    {
+      "producto": "papel higiénico",
+      "ventas": 5952
+    },
+    {
+      "producto": "queso",
+      "ventas": 5933
+    },
+    {
+      "producto": "galletas",
+      "ventas": 5911
+    },
+    {
+      "producto": "yogurt",
+      "ventas": 5878
+    },
+    {
+      "producto": "leche",
+      "ventas": 5869
+    }
+  ],
+  "tiendas": [
+    "Mixquiahuala de Juárez",
+    "Progreso de Obregón",
+    "Tlahuelilpan",
+    "Tlaxcoapan"
+  ],
+  "precios": {
+    "agua embotellada": 12.48791847041847,
+    "arroz": 29.447183817062417,
+    "cerveza": 27.19126562499991,
+    "detergente": 78.56855698371895,
+    "frijol": 31.419656375370764,
+    "galletas": 26.47750803586535,
+    "huevo": 44.935972495088414,
+    "jugo": 18.99532863849765,
+    "leche": 21.987802010563918,
+    "pan blanco": 35.10616402116403,
+    "pan dulce": 14.994645669291357,
+    "papel higiénico": 63.76718245967734,
+    "queso": 53.63263947412778,
+    "refresco": 19.481482118294227,
+    "sabritas": 21.45638989794149,
+    "tortillas": 17.711707995365046,
+    "yogurt": 16.455292616536212
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "casos": [
+    {
+      "personas": 1,
+      "m2": 40,
+      "genero": "H",
+      "despensa": [
+        "arroz",
+        "frijol",
+        "huevo",
+        "leche",
+        "tortillas"
+      ],
+      "hogar": [
+        "detergente",
+        "papel higiénico"
+      ],
+      "personal": []
+    },
+    {
+      "personas": 2,
+      "m2": 60,
+      "genero": "M",
+      "despensa": [
+        "leche",
+        "pan blanco",
+        "huevo",
+        "yogurt",
+        "galletas"
+      ],
+      "hogar": [
+        "detergente",
+        "papel higiénico"
+      ],
+      "personal": []
+    },
+    {
+      "personas": 3,
+      "m2": 80,
+      "genero": "H-M",
+      "despensa": [
+        "arroz",
+        "frijol",
+        "leche",
+        "pan blanco",
+        "queso",
+        "tortillas"
+      ],
+      "hogar": [
+        "detergente",
+        "papel higiénico"
+      ],
+      "personal": []
+    },
+    {
+      "personas": 4,
+      "m2": 100,
+      "genero": "H-M",
+      "despensa": [
+        "arroz",
+        "frijol",
+        "huevo",
+        "leche",
+        "pan blanco",
+        "pan dulce",
+        "tortillas"
+      ],
+      "hogar": [
+        "detergente",
+        "papel higiénico"
+      ],
+      "personal": []
+    },
+    {
+      "personas": 5,
+      "m2": 130,
+      "genero": "H-M",
+      "despensa": [
+        "arroz",
+        "frijol",
+        "huevo",
+        "leche",
+        "queso",
+        "tortillas",
+        "galletas"
+      ],
+      "hogar": [
+        "detergente",
+        "papel higiénico"
+      ],
+      "personal": []
+    },
+    {
+      "personas": 6,
+      "m2": 160,
+      "genero": "H-M",
+      "despensa": [
+        "arroz",
+        "frijol",
+        "huevo",
+        "leche",
+        "pan blanco",
+        "queso",
+        "tortillas",
+        "sabritas"
+      ],
+      "hogar": [
+        "detergente",
+        "papel higiénico"
+      ],
+      "personal": []
+    }
+  ]
+}

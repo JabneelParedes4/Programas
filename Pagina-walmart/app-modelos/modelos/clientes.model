@@ -1,0 +1,292 @@
+{
+  "segmentos": [
+    {
+      "segmento": "Male | Member | Tlahuelilpan",
+      "tickets": 1295,
+      "hora_pico": "16:00",
+      "producto_top": "galletas",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Male",
+      "tipo_cliente": "Member",
+      "city": "Tlahuelilpan",
+      "total_ventas": 450748.15999999957,
+      "gasto_promedio": 348.0680772200769,
+      "hora_critica": "16:00",
+      "productos_pico": [
+        "galletas",
+        "arroz",
+        "cerveza"
+      ]
+    },
+    {
+      "segmento": "Female | Member | Progreso de Obregón",
+      "tickets": 1288,
+      "hora_pico": "19:00",
+      "producto_top": "detergente",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Female",
+      "tipo_cliente": "Member",
+      "city": "Progreso de Obregón",
+      "total_ventas": 520220.17999999976,
+      "gasto_promedio": 403.89765527950294,
+      "hora_critica": "19:00",
+      "productos_pico": [
+        "detergente",
+        "queso",
+        "huevo"
+      ]
+    },
+    {
+      "segmento": "Female | Member | Mixquiahuala de Juárez",
+      "tickets": 1277,
+      "hora_pico": "20:00",
+      "producto_top": "tortillas",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Female",
+      "tipo_cliente": "Member",
+      "city": "Mixquiahuala de Juárez",
+      "total_ventas": 496261.2199999997,
+      "gasto_promedio": 388.61489428347664,
+      "hora_critica": "20:00",
+      "productos_pico": [
+        "tortillas",
+        "papel higiénico",
+        "yogurt"
+      ]
+    },
+    {
+      "segmento": "Male | Normal | Tlaxcoapan",
+      "tickets": 1264,
+      "hora_pico": "20:00",
+      "producto_top": "galletas",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Male",
+      "tipo_cliente": "Normal",
+      "city": "Tlaxcoapan",
+      "total_ventas": 470672.9600000009,
+      "gasto_promedio": 372.36784810126653,
+      "hora_critica": "20:00",
+      "productos_pico": [
+        "galletas",
+        "yogurt",
+        "leche"
+      ]
+    },
+    {
+      "segmento": "Male | Member | Mixquiahuala de Juárez",
+      "tickets": 1258,
+      "hora_pico": "14:00",
+      "producto_top": "papel higiénico",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Male",
+      "tipo_cliente": "Member",
+      "city": "Mixquiahuala de Juárez",
+      "total_ventas": 492972.8200000024,
+      "gasto_promedio": 391.87028616852336,
+      "hora_critica": "14:00",
+      "productos_pico": [
+        "papel higiénico",
+        "cerveza",
+        "refresco"
+      ]
+    },
+    {
+      "segmento": "Female | Normal | Tlahuelilpan",
+      "tickets": 1250,
+      "hora_pico": "16:00",
+      "producto_top": "detergente",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Female",
+      "tipo_cliente": "Normal",
+      "city": "Tlahuelilpan",
+      "total_ventas": 440098.0400000006,
+      "gasto_promedio": 352.0784320000005,
+      "hora_critica": "16:00",
+      "productos_pico": [
+        "detergente",
+        "yogurt",
+        "sabritas"
+      ]
+    },
+    {
+      "segmento": "Male | Normal | Progreso de Obregón",
+      "tickets": 1249,
+      "hora_pico": "9:00",
+      "producto_top": "queso",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Male",
+      "tipo_cliente": "Normal",
+      "city": "Progreso de Obregón",
+      "total_ventas": 498440.83999999904,
+      "gasto_promedio": 399.07192954363416,
+      "hora_critica": "9:00",
+      "productos_pico": [
+        "queso",
+        "cerveza",
+        "leche"
+      ]
+    },
+    {
+      "segmento": "Male | Normal | Mixquiahuala de Juárez",
+      "tickets": 1249,
+      "hora_pico": "11:00",
+      "producto_top": "queso",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Male",
+      "tipo_cliente": "Normal",
+      "city": "Mixquiahuala de Juárez",
+      "total_ventas": 475665.54999999946,
+      "gasto_promedio": 380.8371096877498,
+      "hora_critica": "11:00",
+      "productos_pico": [
+        "queso",
+        "tortillas",
+        "leche"
+      ]
+    },
+    {
+      "segmento": "Female | Member | Tlaxcoapan",
+      "tickets": 1248,
+      "hora_pico": "10:00",
+      "producto_top": "leche",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Female",
+      "tipo_cliente": "Member",
+      "city": "Tlaxcoapan",
+      "total_ventas": 456991.2999999987,
+      "gasto_promedio": 366.17892628205027,
+      "hora_critica": "10:00",
+      "productos_pico": [
+        "leche",
+        "galletas",
+        "pan dulce"
+      ]
+    },
+    {
+      "segmento": "Male | Member | Tlaxcoapan",
+      "tickets": 1244,
+      "hora_pico": "11:00",
+      "producto_top": "arroz",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Male",
+      "tipo_cliente": "Member",
+      "city": "Tlaxcoapan",
+      "total_ventas": 465517.89000000124,
+      "gasto_promedio": 374.21052250803956,
+      "hora_critica": "11:00",
+      "productos_pico": [
+        "arroz",
+        "queso",
+        "sabritas"
+      ]
+    },
+    {
+      "segmento": "Female | Normal | Tlaxcoapan",
+      "tickets": 1244,
+      "hora_pico": "9:00",
+      "producto_top": "galletas",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Female",
+      "tipo_cliente": "Normal",
+      "city": "Tlaxcoapan",
+      "total_ventas": 463953.9400000013,
+      "gasto_promedio": 372.95332797427756,
+      "hora_critica": "9:00",
+      "productos_pico": [
+        "galletas",
+        "papel higiénico",
+        "sabritas"
+      ]
+    },
+    {
+      "segmento": "Female | Normal | Progreso de Obregón",
+      "tickets": 1237,
+      "hora_pico": "15:00",
+      "producto_top": "yogurt",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Female",
+      "tipo_cliente": "Normal",
+      "city": "Progreso de Obregón",
+      "total_ventas": 500838.7500000016,
+      "gasto_promedio": 404.8817704122891,
+      "hora_critica": "15:00",
+      "productos_pico": [
+        "yogurt",
+        "queso",
+        "papel higiénico"
+      ]
+    },
+    {
+      "segmento": "Female | Member | Tlahuelilpan",
+      "tickets": 1236,
+      "hora_pico": "18:00",
+      "producto_top": "frijol",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Female",
+      "tipo_cliente": "Member",
+      "city": "Tlahuelilpan",
+      "total_ventas": 437406.72999999946,
+      "gasto_promedio": 353.8889401294494,
+      "hora_critica": "18:00",
+      "productos_pico": [
+        "frijol",
+        "agua embotellada",
+        "refresco"
+      ]
+    },
+    {
+      "segmento": "Male | Member | Progreso de Obregón",
+      "tickets": 1226,
+      "hora_pico": "17:00",
+      "producto_top": "galletas",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Male",
+      "tipo_cliente": "Member",
+      "city": "Progreso de Obregón",
+      "total_ventas": 484936.3899999999,
+      "gasto_promedio": 395.5435481239803,
+      "hora_critica": "17:00",
+      "productos_pico": [
+        "galletas",
+        "leche",
+        "cerveza"
+      ]
+    },
+    {
+      "segmento": "Male | Normal | Tlahuelilpan",
+      "tickets": 1219,
+      "hora_pico": "10:00",
+      "producto_top": "papel higiénico",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Male",
+      "tipo_cliente": "Normal",
+      "city": "Tlahuelilpan",
+      "total_ventas": 438486.9899999988,
+      "gasto_promedio": 359.7104101722714,
+      "hora_critica": "10:00",
+      "productos_pico": [
+        "papel higiénico",
+        "pan dulce",
+        "galletas"
+      ]
+    },
+    {
+      "segmento": "Female | Normal | Mixquiahuala de Juárez",
+      "tickets": 1216,
+      "hora_pico": "11:00",
+      "producto_top": "yogurt",
+      "metodo_pago_top": "Efectivo",
+      "genero": "Female",
+      "tipo_cliente": "Normal",
+      "city": "Mixquiahuala de Juárez",
+      "total_ventas": 461813.0799999999,
+      "gasto_promedio": 379.78049342105254,
+      "hora_critica": "11:00",
+      "productos_pico": [
+        "yogurt",
+        "papel higiénico",
+        "pan dulce"
+      ]
+    }
+  ]
+}

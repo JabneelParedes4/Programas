@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Dashboard - App de Modelos</title>
+
+  <link rel="stylesheet" href="/css/theme.css">
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  />
+
+</head>
+
+<body>
+<header class="walmart-topbar">
+
+  <div class="topbar-inner">
+
+    <div class="brand">
+
+      <img
+        src="/img/walmart-logo.svg"
+        alt="Walmart"
+      >
+
+      <div class="brand-text">
+
+        <h1>
+          Sistema Inteligente de Análisis Comercial
+        </h1>
+
+        <p>
+          Modelos inteligentes y representación del conocimiento
+        </p>
+
+      </div>
+
+    </div>
+
+    <nav>
+
+      <a href="/">Inicio</a>
+
+      <a href="/tiendas.html">Tiendas</a>
+
+      <a href="/despensa.html">Despensa</a>
+
+      <a href="/horarios.html">Horarios</a>
+
+      <a href="/clientes.html">Clientes</a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<main class="page">
+
+<section class="hero walmart-hero">
+
+  <h2>
+    <span class="material-symbols-outlined hero-icon">
+dashboard
+</span>
+App Web de Modelos Inteligentes
+  </h2>
+
+  <p>
+    Sistema inteligente de análisis comercial y representación del conocimiento orientado a la toma de decisiones empresariales.
+    Integra modelos de asociación de productos, análisis de comportamiento de clientes,
+    detección de horarios pico, tendencias comerciales y procesamiento de conocimiento.
+  </p>
+
+</section>
+
+
+<section class="dashboard-grid">
+
+    <div class="card">
+      <h2><span class="material-symbols-outlined title-icon">
+storefront
+</span>
+Página 1</h2>
+      <div class="card-tag">ANÁLISIS COMERCIAL</div>
+      <p>
+        Lista de tiendas, productos destacados, carrito inteligente y recomendaciones basadas en asociaciones de compra y comportamiento de consumo.
+      </p>
+      <a href="/tiendas.html">Abrir tiendas</a>
+    </div>
+
+    <div class="card">
+      <h2><span class="material-symbols-outlined title-icon">
+inventory_2
+</span>
+Página 2</h2>
+      <div class="card-tag">CONSUMO INTELIGENTE</div>
+      <p>
+        Estimación de productos para despensa, hogar y consumo personal utilizando patrones históricos y segmentación de necesidades.
+      </p>
+      <a href="/despensa.html">Abrir despensa</a>
+    </div>
+
+    <div class="card">
+      <h2><span class="material-symbols-outlined title-icon">
+monitoring
+</span>
+Página 3</h2>
+      <div class="card-tag">ANÁLISIS TEMPORAL</div>
+      <p>
+        Identificación de horarios pico, tendencias mensuales, comportamiento por quincena y análisis temporal de concurrencia comercial.
+      </p>
+      <a href="/horarios.html">Abrir horarios</a>
+    </div>
+
+    <div class="card">
+  <h2><span class="material-symbols-outlined title-icon">
+groups
+</span>
+Página 4</h2>
+
+  <div class="card-tag">COMPORTAMIENTO CLIENTES</div>
+
+  <p>
+    Segmentación de clientes, patrones de compra, horarios de concurrencia y comportamiento comercial basado en conocimiento empresarial.
+  </p>
+
+  <a href="/clientes.html">Abrir clientes</a>
+</div>
+
+</section>
+
+<section class="kpi-grid">
+
+  <div class="kpi-card">
+
+    <div class="kpi-header">
+
+      <div class="kpi-icon-wrap">
+        <span class="material-symbols-outlined kpi-icon">
+          database
+        </span>
+      </div>
+
+      <span class="kpi-title">
+        Dataset
+      </span>
+
+    </div>
+
+    <strong>79,875</strong>
+
+    <small>Registros procesados</small>
+
+  </div>
+
+  <div class="kpi-card">
+
+    <div class="kpi-header">
+
+      <div class="kpi-icon-wrap">
+        <span class="material-symbols-outlined kpi-icon">
+          neurology
+        </span>
+      </div>
+
+      <span class="kpi-title">
+        Modelos
+      </span>
+
+    </div>
+
+    <strong>4</strong>
+
+    <small>Modelos inteligentes</small>
+
+  </div>
+
+  <div class="kpi-card">
+
+    <div class="kpi-header">
+
+      <div class="kpi-icon-wrap">
+        <span class="material-symbols-outlined kpi-icon">
+          storefront
+        </span>
+      </div>
+
+      <span class="kpi-title">
+        Sucursales
+      </span>
+
+    </div>
+
+    <strong>4</strong>
+
+    <small>Puntos comerciales</small>
+
+  </div>
+
+  <div class="kpi-card">
+
+    <div class="kpi-header">
+
+      <div class="kpi-icon-wrap">
+        <span class="material-symbols-outlined kpi-icon">
+          query_stats
+        </span>
+      </div>
+
+      <span class="kpi-title">
+        Análisis
+      </span>
+
+    </div>
+
+    <strong style="font-size:30px;">
+      Tiempo real
+    </strong>
+
+    <small>Procesamiento dinámico</small>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="dashboard-grid">
+
+
+    <div class="card compact-card">
+
+      <h2><span class="material-symbols-outlined title-icon">
+memory
+</span>
+Entrenar modelos</h2>
+
+      <div class="card-tag">PROCESAMIENTO</div>
+
+      <p>
+        Entrena los modelos principales usando el archivo CSV cargado en
+        la carpeta <strong>uploads</strong>.
+      </p>
+
+      <button onclick="entrenarTodo()">
+        Generar análisis inteligente
+      </button>
+
+    </div>
+
+    <div class="card compact-card">
+
+      <h2><span class="material-symbols-outlined title-icon">
+cloud_done
+</span>
+Estado API</h2>
+
+      <div class="card-tag">SERVICIOS</div>
+
+      <p>
+        Verifica que el backend en Go esté funcionando correctamente y que
+        el motor de análisis esté disponible.
+      </p>
+
+      <button onclick="probarAPI()">
+        Verificar motor de análisis
+      </button>
+
+    </div>
+
+  </div>
+
+  <section class="status">
+    <h2>Resultado</h2>
+    <pre id="resultado">Sin acciones todavía.</pre>
+  </section>
+
+</main>
+
+<script>
+  async function probarAPI() {
+    const salida = document.getElementById('resultado');
+    salida.textContent = 'Consultando API...';
+
+    try {
+      const res = await fetch('/api/status');
+      const data = await res.json();
+      salida.textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+      salida.textContent = 'Error conectando con la API.';
+    }
+  }
+
+  async function entrenarTodo() {
+    const salida = document.getElementById('resultado');
+    salida.textContent = 'Entrenando modelos...\n';
+
+    const endpoints = [
+      { nombre: 'Recomendaciones', url: '/api/entrenar' },
+      { nombre: 'KNN Despensa', url: '/api/entrenar-despensa' },
+      { nombre: 'Horarios pico', url: '/api/entrenar-horarios' },
+      { nombre: 'Clientes pico', url: '/api/entrenar-clientes' }
+    ];
+
+    let resultados = [];
+
+    for (const item of endpoints) {
+      try {
+        const res = await fetch(item.url);
+        const data = await res.json();
+
+        resultados.push({
+          modelo: item.nombre,
+          respuesta: data
+        });
+
+        salida.textContent = JSON.stringify(resultados, null, 2);
+
+      } catch (error) {
+        resultados.push({
+          modelo: item.nombre,
+          error: 'No se pudo entrenar'
+        });
+
+        salida.textContent = JSON.stringify(resultados, null, 2);
+      }
+    }
+  }
+</script>
+<footer class="footer">
+  Proyecto de Ingeniería del Conocimiento · ITSOEH · 2026
+</footer>
+
+</body>
+</html>
